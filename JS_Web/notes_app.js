@@ -1,14 +1,36 @@
-const notes = ['Go Gym', 'Study STA 102', 'Play Some Overwatch']
+const notes = [{
+    title: 'Go Gym',
+    isCompleted: false 
+},
+{
+    title: 'Study CSE',
+    isCompleted: false 
+}]
 
 notes.forEach(function (item) {
     const p = document.createElement('p')
-    p.textContent = item
+    p.textContent = item.title
     p.className = 'notes'
     document.querySelector('body').appendChild(p)
 }) 
 
-document.querySelector('#pressMe').addEventListener('click', function () {
-    document.querySelectorAll('.notes').forEach(function (item) {
-        item.remove()
+let addItem = function (title) {
+    notes.push({
+        title: title,
+        isCompleted: false
     })
+    const p = document.createElement('p')
+    p.textContent = title
+    p.className = 'notes'
+    document.querySelector('body').appendChild(p)
+}
+
+let textTemp = "empty"
+
+document.querySelector('#inputField').addEventListener('change', function (e) {
+    textTemp = e.target.value
+})
+
+document.querySelector('#pressMe').addEventListener('click', function () {
+    addItem(textTemp)
 })
