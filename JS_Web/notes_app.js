@@ -1,31 +1,14 @@
-let todos = [{
-    title: 'Go Gym',
-    isCompleted: false
-},
-{
-    title: 'Go Shopping',
-    isCompleted: true
-},
-{
-    title: 'Go Study',
-    isCompleted: false
-},
-{
-    title: 'Go Code',
-    isCompleted: true
-}]
+const notes = ['Go Gym', 'Study STA 102', 'Play Some Overwatch']
 
-const filterTodo = todos.filter(function (item) {
-    return !item.isCompleted
-})
-
-const p = document.createElement('p')
-
-p.textContent = `You have ${filterTodo.length} tasks left`
-document.querySelector('body').appendChild(p)
-
-todos.forEach(function (item) {
+notes.forEach(function (item) {
     const p = document.createElement('p')
-    p.textContent = item.title
+    p.textContent = item
+    p.className = 'notes'
     document.querySelector('body').appendChild(p)
+}) 
+
+document.querySelector('#pressMe').addEventListener('click', function () {
+    document.querySelectorAll('.notes').forEach(function (item) {
+        item.remove()
+    })
 })
