@@ -5,32 +5,34 @@ const notes = [{
 {
     title: 'Study CSE',
     isCompleted: false 
+},{
+    title: 'Do Work',
+    isCompleted: false 
 }]
 
-notes.forEach(function (item) {
-    const p = document.createElement('p')
-    p.textContent = item.title
-    p.className = 'notes'
-    document.querySelector('body').appendChild(p)
-}) 
-
-let addItem = function (title) {
-    notes.push({
-        title: title,
-        isCompleted: false
-    })
-    const p = document.createElement('p')
-    p.textContent = title
-    p.className = 'notes'
-    document.querySelector('body').appendChild(p)
+const filters = {
+    searchText: ''
 }
 
-let textTemp = "empty"
+const renderNotes = function (notes, filters) {
+    const filteredNotes = notes.filter(function (note) {
+        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
 
-document.querySelector('#inputField').addEventListener('change', function (e) {
-    textTemp = e.target.value
+    document.querySelector('#notes').innerHTML = ''
+    
+    filteredNotes.forEach(function (note) {
+        const noteElement = document.createElement('p')
+        noteElement.textContent = note.title
+        document.querySelector('#notes').appendChild(noteElement)
+    })
+}
+
+document.querySelector('#search_text').addEventListener('change', function (e) {
+    filters.searchText = e.target.value
+    renderNotes(notes, filters)
 })
 
-document.querySelector('#pressMe').addEventListener('click', function () {
-    addItem(textTemp)
+document.querySelector('#create_note').addEventListener('click', function () {
+    
 })
