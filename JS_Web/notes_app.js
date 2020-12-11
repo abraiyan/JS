@@ -27,15 +27,16 @@ const renderNotes = function (todos, filters) {
 }
 
 renderNotes(todos, filters)
+countTodo()
 
-document.querySelector('#search_todo').addEventListener('click', function(e) {
-    filters.searchText = document.querySelector('#input_field').value
-    console.log(filters.searchText)
+document.querySelector('#input_field').addEventListener('input', function(e) {
+    filters.searchText = e.target.value
     renderNotes(todos, filters)
 })
 
-document.querySelector('#create_todo').addEventListener('click', function(e) {
-    addTodo(todos, document.querySelector('#input_field').value)
+document.querySelector('#name_form').addEventListener('submit', function (e) {
+    e.preventDefault()
+    console.log(e.target.elements.firstName.value)
 })
 
 function addTodo (todos, todoTitle) {
@@ -45,10 +46,22 @@ function addTodo (todos, todoTitle) {
     })
     
     createParagraph(todoTitle)
+    countTodo()
 }
 
 function createParagraph (text) {
     const p = document.createElement('p')
     p.textContent = text
     document.querySelector('#todos').appendChild(p)
+}
+
+function countTodo () {
+    let counter = 0
+    todos.forEach(function (todo) {
+        if(!todo.isCompleted) {
+            counter++
+        }
+    })
+    const h1 = document.querySelector('#todo_status')
+    h1.textContent = `You have ${counter} todos left`
 }
