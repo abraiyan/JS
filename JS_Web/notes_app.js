@@ -1,4 +1,4 @@
-const notes = [{
+const todos = [{
     title: 'Go Gym',
     isCompleted: false 
 },
@@ -14,27 +14,41 @@ const filters = {
     searchText: ''
 }
 
-const renderNotes = function (notes, filters) {
-    const filteredNotes = notes.filter(function (note) {
-        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+const renderNotes = function (todos, filters) {
+    const filteredNotes = todos.filter(function (todo) {
+        return todo.title.toLowerCase().includes(filters.searchText.toLowerCase())
     })
 
-    document.querySelector('#notes').innerHTML = ''
-    
-    filteredNotes.forEach(function (note) {
-        const noteElement = document.createElement('p')
-        noteElement.textContent = note.title
-        document.querySelector('#notes').appendChild(noteElement)
+    document.querySelector('#todos').innerHTML = ''
+
+    filteredNotes.forEach(function (todo) {
+        createParagraph(todo.title)
     })
 }
 
-renderNotes(notes, filters)
+renderNotes(todos, filters)
 
-document.querySelector('#search_text').addEventListener('change', function (e) {
-    filters.searchText = e.target.value
-    renderNotes(notes, filters)
+document.querySelector('#search_todo').addEventListener('click', function(e) {
+    filters.searchText = document.querySelector('#input_field').value
+    console.log(filters.searchText)
+    renderNotes(todos, filters)
 })
 
-document.querySelector('#create_note').addEventListener('click', function () {
+document.querySelector('#create_todo').addEventListener('click', function(e) {
+    addTodo(todos, document.querySelector('#input_field').value)
+})
+
+function addTodo (todos, todoTitle) {
+    todos.push({
+        title: todoTitle,
+        isCompleted: false
+    })
     
-})
+    createParagraph(todoTitle)
+}
+
+function createParagraph (text) {
+    const p = document.createElement('p')
+    p.textContent = text
+    document.querySelector('#todos').appendChild(p)
+}
