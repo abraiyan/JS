@@ -44,7 +44,15 @@ function renderTodos (filterObject) {
 }
 
 function appendChildAtTodoDiv (item) {
-    const p = document.createElement('p')
-    p.textContent = item.title
-    document.getElementById('todo_section').appendChild(p)
+    const todoDiv = document.createElement('div')
+    const todoText = document.createElement('span')
+    const checkbox = document.createElement('input')
+
+    checkbox.setAttribute('type', 'checkbox')
+    todoDiv.appendChild(checkbox)
+
+    todoText.textContent = item.title
+    todoDiv.appendChild(todoText)
+    
+    document.getElementById('todo_section').appendChild(todoDiv)
 }
