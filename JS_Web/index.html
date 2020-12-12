@@ -3,13 +3,16 @@
     <head></head>
     <body>
         <h1>To Do App</h1>
-        <h2>You have 3 todos left</h2>
+        <h2 id="left_todos">You have 3 todos left</h2>
         <input type="text" placeholder="Enter Text" id="search_field">
+        <label>
+            <input type="checkbox" id="hide_completed"> Hide Completed
+        </label>
         <div id="todo_section">
 
         </div>
         <form id="todo_form">
-            <input type="text" placeholder="Add Todo">
+            <input type="text" placeholder="Add Todo" name="addTodo">
             <button>Add</button>
         </form>
         <script src="todo_app.js"></script>
