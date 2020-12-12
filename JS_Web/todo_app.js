@@ -1,28 +1,22 @@
-let todoArray = [{
-    title: 'Do some HTML',
-    isCompleted: true
-},
-{
-    title: 'Cook Breakfast',
-    isCompleted: false
-},
-{
-    title: 'Again Coding',
-    isCompleted: false
-}]
+let todoArray = []
 
 let filterObject = {
     searchText: '',
     hideCompleted: false
 }
 
-localStorage.setItem('name', 'Raiyan')
+const todosJSON = localStorage.getItem('todos')
+
+if(todosJSON !== null) {
+    todoArray = JSON.parse(todosJSON)
+}
 
 function addItem (todoTitle) {
     todoArray.push({
         title: todoTitle,
         isCompleted: false
     })
+    localStorage.setItem('todos', JSON.stringify(todoArray))
     countLeftTodos()
     renderTodos(filterObject)
 }
