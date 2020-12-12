@@ -39,7 +39,7 @@ function renderTodos (filterObject) {
 
     clearTodoDiv()    
     filteredTodos.forEach(function (item) {
-        appendChildAtTodoDiv()
+        appendChildAtTodoDiv(item)
     })
 }
 
