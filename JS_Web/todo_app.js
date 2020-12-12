@@ -16,11 +16,15 @@ let filterObject = {
     hideCompleted: false
 }
 
+localStorage.setItem('name', 'Raiyan')
+
 function addItem (todoTitle) {
     todoArray.push({
         title: todoTitle,
         isCompleted: false
     })
+    countLeftTodos()
+    renderTodos(filterObject)
 }
 
 function countLeftTodos () {
@@ -67,6 +71,6 @@ document.getElementById('todo_form').addEventListener('submit', function (e) {
     e.preventDefault()
     const todoTitle =  e.target.elements.addTodo.value
     addItem(todoTitle)
-    renderTodos(filterObject)
+    e.target.elements.addTodo.value = ''
 })
 
