@@ -76,10 +76,10 @@ function appendChildAtTodoDiv (item) {
 
     checkbox.addEventListener('change', function (e) {
         makeTodoChecked(item.id, e.target.checked)
-        e.target.checked = e.target.checked
     })
 
     checkbox.setAttribute('type', 'checkbox')
+    checkbox.checked = item.isCompleted
     todoDiv.appendChild(checkbox)
 
     todoText.textContent = item.title
