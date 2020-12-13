@@ -25,3 +25,4 @@ document.getElementById('todo_form').addEventListener('submit', function (e) {
     e.target.elements.addTodo.value = ''
 })
 
+

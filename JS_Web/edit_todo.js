@@ -30,3 +30,4 @@ document.getElementById('remove_todo_button').addEventListener('click', function
     saveTodos(todoArray)
     location.assign('/JS_Web/index.html')
 })
+
