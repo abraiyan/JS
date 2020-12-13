@@ -55,13 +55,14 @@ function removeTodo (noteID) {
 }
 
 function makeTodoChecked (noteID, booleanValue) {
-    const index = todoArray.findIndex(function (item) {
+    const todo = todoArray.find(function (item) {
         return item.id === noteID
     })
 
-    todoArray[index].isCompleted = booleanValue
+    todo.isCompleted = booleanValue
     localStorage.setItem('todos', JSON.stringify(todoArray))
     renderTodos(filterObject)
+    countLeftTodos()
 }
 
 function appendChildAtTodoDiv (item) {
