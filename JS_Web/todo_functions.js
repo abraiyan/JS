@@ -56,7 +56,6 @@ function removeTodo (noteID) {
     })
     todoArray.splice(index, 1)
     saveTodos(todoArray)
-    renderTodos(filterObject)
 }
 
 function makeTodoChecked (noteID, booleanValue) {
@@ -78,6 +77,7 @@ function appendChildAtTodoDiv (item) {
 
     removeButton.addEventListener('click', function (e) {
         removeTodo(item.id)
+        renderTodos(filterObject)
     })
 
     checkbox.addEventListener('change', function (e) {

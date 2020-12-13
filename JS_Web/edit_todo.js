@@ -9,7 +9,7 @@ const todoItem = todoArray.find(function (item) {
 })
 
 if(todoItem == undefined) {
-    location.assign('/index.html')
+    location.assign('/JS_Web/index.html')
 }
 
 todoTitle.value = todoItem.title
@@ -23,4 +23,10 @@ todoTitle.addEventListener('input', function (e) {
 todoDescription.addEventListener('input', function (e) {
     todoItem.description = e.target.value
     saveTodos(todoArray)
+})
+
+document.getElementById('remove_todo_button').addEventListener('click', function () {
+    removeTodo(todoID)
+    saveTodos(todoArray)
+    location.assign('/JS_Web/index.html')
 })
