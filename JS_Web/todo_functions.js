@@ -1,3 +1,4 @@
+
 function getSavedTodos () {
     const todosJSON = localStorage.getItem('todos')
 
@@ -10,6 +11,7 @@ function getSavedTodos () {
 
 function addItem (todoTitle) {
     todoArray.push({
+        id: uuidv4(),
         title: todoTitle,
         isCompleted: false
     })
@@ -43,16 +45,48 @@ function renderTodos (filterObject) {
     })
 }
 
+function removeTodo (noteID) {
+    const index = todoArray.findIndex(function (item) {
+        return item.id === noteID
+    })
+    todoArray.splice(index, 1)
+    localStorage.setItem('todos', JSON.stringify(todoArray))
+    renderTodos(filterObject)
+}
+
+function makeTodoChecked (noteID, booleanValue) {
+    const index = todoArray.findIndex(function (item) {
+        return item.id === noteID
+    })
+
+    todoArray[index].isCompleted = booleanValue
+    localStorage.setItem('todos', JSON.stringify(todoArray))
+    renderTodos(filterObject)
+}
+
 function appendChildAtTodoDiv (item) {
     const todoDiv = document.createElement('div')
     const todoText = document.createElement('span')
     const checkbox = document.createElement('input')
+    const removeButton = document.createElement('button')
+
+    removeButton.addEventListener('click', function (e) {
+        removeTodo(item.id)
+    })
+
+    checkbox.addEventListener('change', function (e) {
+        makeTodoChecked(item.id, e.target.checked)
+        e.target.checked = e.target.checked
+    })
 
     checkbox.setAttribute('type', 'checkbox')
     todoDiv.appendChild(checkbox)
 
     todoText.textContent = item.title
     todoDiv.appendChild(todoText)
-    
+
+    removeButton.textContent = 'x'
+    todoDiv.appendChild(removeButton)
+
     document.getElementById('todo_section').appendChild(todoDiv)
 }
