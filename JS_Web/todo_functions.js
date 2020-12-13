@@ -9,13 +9,18 @@ function getSavedTodos () {
     }
 }
 
+function saveTodos (todoArray) {
+    localStorage.setItem('todos', JSON.stringify(todoArray))
+}
+
 function addItem (todoTitle) {
     todoArray.push({
         id: uuidv4(),
         title: todoTitle,
+        description: 'Sample Description',
         isCompleted: false
     })
-    localStorage.setItem('todos', JSON.stringify(todoArray))
+    saveTodos(todoArray)
     countLeftTodos()
     renderTodos(filterObject)
 }
@@ -50,7 +55,7 @@ function removeTodo (noteID) {
         return item.id === noteID
     })
     todoArray.splice(index, 1)
-    localStorage.setItem('todos', JSON.stringify(todoArray))
+    saveTodos(todoArray)
     renderTodos(filterObject)
 }
 
@@ -60,14 +65,14 @@ function makeTodoChecked (noteID, booleanValue) {
     })
 
     todo.isCompleted = booleanValue
-    localStorage.setItem('todos', JSON.stringify(todoArray))
+    saveTodos(todoArray)
     renderTodos(filterObject)
     countLeftTodos()
 }
 
 function appendChildAtTodoDiv (item) {
     const todoDiv = document.createElement('div')
-    const todoText = document.createElement('span')
+    const todoText = document.createElement('a')
     const checkbox = document.createElement('input')
     const removeButton = document.createElement('button')
 
@@ -84,6 +89,7 @@ function appendChildAtTodoDiv (item) {
     todoDiv.appendChild(checkbox)
 
     todoText.textContent = item.title
+    todoText.setAttribute('href', `/JS_Web/edit.html#${item.id}`)
     todoDiv.appendChild(todoText)
 
     removeButton.textContent = 'x'
