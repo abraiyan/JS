@@ -1,7 +1,12 @@
-const age = 19
+const calculateTip = (amount, tipPercentage) => {
+  if (typeof amount !== 'number' || typeof tipPercentage !== 'number') {
+    throw Error('Input should be a number')
+  }
+  return amount * (tipPercentage / 100)
+}
 
-const enterHall = () => 'Welcome!'
-
-const exitHall = () => 'See you soon'
-
-console.log(age >= 18 ? enterHall() : exitHall())
+try {
+  console.log(`calculated tip : ${calculateTip(200, 20)}`)
+} catch (e) {
+  console.log(e.message)
+}
