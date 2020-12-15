@@ -8,7 +8,7 @@ let filterObject = {
 renderTodos(filterObject)
 countLeftTodos()
 
-document.getElementById('search_field').addEventListener('input', function (e) {
+document.getElementById('search_field').addEventListener('input', (e) => {
   filterObject.searchText = e.target.value
   renderTodos(filterObject)
 })
@@ -20,7 +20,7 @@ document
     renderTodos(filterObject)
   })
 
-document.getElementById('todo_form').addEventListener('submit', function (e) {
+document.getElementById('todo_form').addEventListener('submit', (e) => {
   e.preventDefault()
   const todoTitle = e.target.elements.addTodo.value
   addItem(todoTitle)

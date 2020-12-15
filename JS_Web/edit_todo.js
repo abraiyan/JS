@@ -5,9 +5,7 @@ const todoTitle = document.getElementById('todo_title')
 const todoDescription = document.getElementById('todo_description')
 const updatedTime = document.getElementById('last_updated_time')
 
-const todoItem = todoArray.find(function (item) {
-  return item.id === todoID
-})
+const todoItem = todoArray.find((item) => item.id === todoID)
 
 if (todoItem == undefined) {
   location.assign('/JS_Web/index.html')
@@ -17,14 +15,14 @@ todoTitle.value = todoItem.title
 todoDescription.value = todoItem.description
 updatedTime.textContent = generateLastEdited(todoItem)
 
-todoTitle.addEventListener('input', function (e) {
+todoTitle.addEventListener('input', (e) => {
   todoItem.title = e.target.value
   todoItem.updatedAt = moment().valueOf()
   updatedTime.textContent = generateLastEdited(todoItem)
   saveTodos(todoArray)
 })
 
-todoDescription.addEventListener('input', function (e) {
+todoDescription.addEventListener('input', (e) => {
   todoItem.description = e.target.value
   todoItem.updatedAt = moment().valueOf()
   updatedTime.textContent = generateLastEdited(todoItem)

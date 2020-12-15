@@ -1,4 +1,4 @@
-function getSavedTodos() {
+getSavedTodos = () => {
   const todosJSON = localStorage.getItem('todos')
 
   if (todosJSON !== null) {
@@ -8,11 +8,11 @@ function getSavedTodos() {
   }
 }
 
-function saveTodos(todoArray) {
+saveTodos = (todoArray) => {
   localStorage.setItem('todos', JSON.stringify(todoArray))
 }
 
-function addItem(todoTitle) {
+addItem = (todoTitle) => {
   const timeStamp = moment().valueOf()
 
   todoArray.push({
@@ -29,9 +29,9 @@ function addItem(todoTitle) {
   renderTodos(filterObject)
 }
 
-function countLeftTodos() {
+countLeftTodos = () => {
   let counter = 0
-  todoArray.forEach(function (item) {
+  todoArray.forEach((item) => {
     if (!item.isCompleted) counter++
   })
   document.getElementById(
@@ -39,12 +39,12 @@ function countLeftTodos() {
   ).textContent = `You have ${counter} todos left to do`
 }
 
-function clearTodoDiv() {
+clearTodoDiv = () => {
   document.getElementById('todo_section').innerHTML = ''
 }
 
-function renderTodos(filterObject) {
-  const filteredTodos = todoArray.filter(function (item) {
+renderTodos = (filterObject) => {
+  const filteredTodos = todoArray.filter((item) => {
     const isIncluded = item.title
       .toLowerCase()
       .includes(filterObject.searchText.toLowerCase())
@@ -53,23 +53,19 @@ function renderTodos(filterObject) {
   })
 
   clearTodoDiv()
-  filteredTodos.forEach(function (item) {
+  filteredTodos.forEach((item) => {
     appendChildAtTodoDiv(item)
   })
 }
 
-function removeTodo(noteID) {
-  const index = todoArray.findIndex(function (item) {
-    return item.id === noteID
-  })
+removeTodo = (noteID) => {
+  const index = todoArray.findIndex((item) => item.id === noteID)
   todoArray.splice(index, 1)
   saveTodos(todoArray)
 }
 
-function makeTodoChecked(noteID, booleanValue) {
-  const todo = todoArray.find(function (item) {
-    return item.id === noteID
-  })
+makeTodoChecked = (noteID, booleanValue) => {
+  const todo = todoArray.find((item) => item.id === noteID)
 
   todo.isCompleted = booleanValue
   saveTodos(todoArray)
@@ -77,12 +73,12 @@ function makeTodoChecked(noteID, booleanValue) {
   countLeftTodos()
 }
 
-function appendChildAtTodoDiv(item) {
+appendChildAtTodoDiv = (item) => {
   const todoDiv = document.createElement('div')
   const todoText = document.createElement('a')
   const checkbox = document.createElement('input')
 
-  checkbox.addEventListener('change', function (e) {
+  checkbox.addEventListener('change', (e) => {
     makeTodoChecked(item.id, e.target.checked)
   })
 
@@ -97,6 +93,6 @@ function appendChildAtTodoDiv(item) {
   document.getElementById('todo_section').appendChild(todoDiv)
 }
 
-function generateLastEdited(todoItem) {
+generateLastEdited = (todoItem) => {
   return `Last Edited ${moment(todoItem.updatedAt).fromNow()}`
 }
