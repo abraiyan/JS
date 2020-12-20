@@ -1,22 +1,18 @@
-class Student {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName
-    this.lastName = lastName
-    this.age = age
-  }
-  getBio() {
-    return `${this.firstName} is ${this.age}`
-  }
-  setName(fullName) {
-    const names = fullName.split(' ')
-    this.firstName = names[0]
-    this.lastName = names[1]
-  }
+const Student = function (id, name, grade) {
+  this.id = id
+  this.name = name
+  this.grade = grade
 }
 
-const studentOne = new Student('AB', 'Raiyan', 21)
-const studentTwo = new Student('John', 'Doe', 23)
+Student.prototype.getDetails = function () {
+  return `Name : ${this.name}, ID : ${this.id}, grade: ${this.grade}`
+}
 
-console.log(studentOne.getBio())
-studentOne.setName('Nasrat Yousha')
-console.log(studentOne.getBio())
+const studentOne = new Student('101', 'Ab Raiyan', 'A')
+console.log(studentOne.getDetails())
+
+studentOne.getDetails = function () {
+  return 'Khao Mara'
+}
+
+console.log(studentOne.getDetails())
