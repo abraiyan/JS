@@ -4,6 +4,7 @@ class Hangman {
     this.remainingGuesses = remainingGuesses
     this.guessedLetters = []
   }
+
   getPuzzle() {
     let puzzle = ''
 
@@ -32,8 +33,3 @@ class Hangman {
     }
   }
 }
-
-const gameOne = new Hangman('Cat', 2)
-console.log(gameOne.getPuzzle())
-
-window.addEventListener('keypress', (e) => {})
