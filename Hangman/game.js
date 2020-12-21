@@ -1,10 +1,11 @@
 const gameOne = new Hangman('Cat', 2)
-console.log(gameOne.getPuzzle())
-console.log(gameOne.remainingGuesses)
+document.getElementById('user_guess_word').textContent = gameOne.getPuzzle()
+document.getElementById('guess_left').textContent = gameOne.remainingGuesses
 
 window.addEventListener('keypress', (e) => {
   const guess = String.fromCharCode(e.charCode)
   gameOne.makeGuess(guess)
-  console.log(gameOne.getPuzzle())
-  console.log(gameOne.remainingGuesses)
+  document.getElementById('user_guess_word').textContent = gameOne.getPuzzle()
+  document.getElementById('guess_left').textContent = gameOne.remainingGuesses
+  console.log(gameOne.status)
 })

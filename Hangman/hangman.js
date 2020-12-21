@@ -3,6 +3,7 @@ class Hangman {
     this.word = word.toLowerCase().split('')
     this.remainingGuesses = remainingGuesses
     this.guessedLetters = []
+    this.status = 'playing'
   }
 
   getPuzzle() {
@@ -30,6 +31,26 @@ class Hangman {
 
     if (isUnique && !isRightGuess) {
       this.remainingGuesses--
+    }
+    this.calculateStatus()
+  }
+
+  calculateStatus() {
+    let finished = true
+
+    this.word.forEach((letter) => {
+      if (this.guessedLetters.includes(letter)) {
+      } else {
+        finished = false
+      }
+    })
+
+    if (this.remainingGuesses === 0) {
+      this.status = 'failed'
+    } else if (finished) {
+      this.status = 'finished'
+    } else {
+      this.status = 'playing'
     }
   }
 }
