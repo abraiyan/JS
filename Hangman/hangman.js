@@ -1,16 +1,32 @@
 class Hangman {
-  constructor(word, remainingGuesses) {
+  constructor(word, guessesLeft) {
     this.word = word.toLowerCase().split('')
-    this.remainingGuesses = remainingGuesses
-    this.guessedLetters = []
-    this.status = 'playing'
+    this.guessesLeft = guessesLeft
+    this.userGuesses = []
+    this.status = 'Playing'
+  }
+
+  makeGuess(guess) {
+    guess = guess.toLowerCase()
+    const uniqueGuess = !this.userGuesses.includes(guess)
+    const rightGuess = this.word.includes(guess)
+
+    if (uniqueGuess) {
+      this.userGuesses.push(guess)
+    }
+
+    if (uniqueGuess && !rightGuess) {
+      this.guessesLeft--
+    }
+
+    this.calculateStatus()
   }
 
   getPuzzle() {
     let puzzle = ''
 
     this.word.forEach((letter) => {
-      if (this.guessedLetters.includes(letter) || letter === ' ') {
+      if (this.userGuesses.includes(letter) || letter === ' ') {
         puzzle += letter
       } else {
         puzzle += '*'
@@ -20,37 +36,17 @@ class Hangman {
     return puzzle
   }
 
-  makeGuess(guess) {
-    guess = guess.toLowerCase()
-    const isUnique = !this.guessedLetters.includes(guess)
-    const isRightGuess = this.word.includes(guess)
-
-    if (isUnique) {
-      this.guessedLetters.push(guess)
-    }
-
-    if (isUnique && !isRightGuess) {
-      this.remainingGuesses--
-    }
-    this.calculateStatus()
-  }
-
   calculateStatus() {
-    let finished = true
-
-    this.word.forEach((letter) => {
-      if (this.guessedLetters.includes(letter)) {
-      } else {
-        finished = false
-      }
+    let finished = this.word.every((letter) => {
+      return this.userGuesses.includes(letter)
     })
 
-    if (this.remainingGuesses === 0) {
-      this.status = 'failed'
+    if (this.guessesLeft <= 0) {
+      this.status = 'Failed'
     } else if (finished) {
-      this.status = 'finished'
+      this.status = 'Finished Wow'
     } else {
-      this.status = 'playing'
+      this.status = 'Playing'
     }
   }
 }

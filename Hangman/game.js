@@ -1,11 +1,16 @@
+const puzzleWord = document.getElementById('puzzle_word')
+const guessLeft = document.getElementById('guess_left')
+const gameStatus = document.getElementById('game_status')
+
 const gameOne = new Hangman('Cat', 2)
-document.getElementById('user_guess_word').textContent = gameOne.getPuzzle()
-document.getElementById('guess_left').textContent = gameOne.remainingGuesses
+puzzleWord.textContent = gameOne.getPuzzle()
+guessLeft.textContent = 'Guesses left : ' + gameOne.guessesLeft
+gameStatus.textContent = 'Game Status : ' + gameOne.status
 
 window.addEventListener('keypress', (e) => {
   const guess = String.fromCharCode(e.charCode)
   gameOne.makeGuess(guess)
-  document.getElementById('user_guess_word').textContent = gameOne.getPuzzle()
-  document.getElementById('guess_left').textContent = gameOne.remainingGuesses
-  console.log(gameOne.status)
+  puzzleWord.textContent = gameOne.getPuzzle()
+  guessLeft.textContent = 'Guesses left : ' + gameOne.guessesLeft
+  gameStatus.textContent = 'Game Status : ' + gameOne.status
 })
