@@ -14,3 +14,15 @@ window.addEventListener('keypress', (e) => {
   guessLeft.textContent = 'Guesses left : ' + gameOne.guessesLeft
   gameStatus.textContent = 'Game Status : ' + gameOne.status
 })
+
+const request = new XMLHttpRequest()
+
+request.addEventListener('readystatechange', (e) => {
+  if (e.target.readyState === 4 && e.target.status === 200) {
+    const data = JSON.parse(e.target.responseText)
+    console.log(data)
+  }
+})
+
+request.open('GET', 'http://puzzle.mead.io/puzzle?wordCount=2')
+request.send()
