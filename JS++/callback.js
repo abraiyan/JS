@@ -4,10 +4,10 @@ const getWeatherPrinted = (callback) => {
   const request = new XMLHttpRequest()
 
   request.addEventListener('readystatechange', (e) => {
-    if (e.target.readyState === 4 && e.target.status === 200) {
-      const data = JSON.parse(e.target.responseText)
+    if (request.readyState === 4 && request.status === 200) {
+      const data = JSON.parse(request.responseText)
       callback(undefined, data.main.temp)
-    } else if (e.target.readyState === 4) {
+    } else if (request.readyState === 4) {
       callback('Error', undefined)
     }
   })
