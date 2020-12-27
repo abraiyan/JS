@@ -1,15 +1,17 @@
-const luluFunc = (data) => {
-  return new Promise((resolve, reject) => {
-    if (data % 2 === 0) resolve(`Your data ${data} is even and ok`)
-    else reject(`Your data ${data} is odd and not ok`)
+const makeItDouble = (data) =>
+  new Promise((resolve, reject) => {
+    typeof data === 'number'
+      ? resolve(data * 2)
+      : reject('Input a number number number')
   })
-}
 
-luluFunc(40).then(
-  (data) => {
+makeItDouble(2)
+  .then((data) => {
+    return makeItDouble(data)
+  })
+  .then((data) => {
     console.log(data)
-  },
-  (error) => {
+  })
+  .catch((error) => {
     console.log(error)
-  }
-)
+  })
