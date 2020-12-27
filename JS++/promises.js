@@ -1,10 +1,11 @@
-const luluFunc = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('GG, it did not worked!')
-  }, 1500)
-})
+const luluFunc = (data) => {
+  return new Promise((resolve, reject) => {
+    if (data % 2 === 0) resolve(`Your data ${data} is even and ok`)
+    else reject(`Your data ${data} is odd and not ok`)
+  })
+}
 
-luluFunc.then(
+luluFunc(40).then(
   (data) => {
     console.log(data)
   },
