@@ -1,12 +1,14 @@
-const getDataCallBack = (callback) => {
+const luluFunc = new Promise((resolve, reject) => {
   setTimeout(() => {
-    callback(undefined, 'This is your data')
-  }, 2000)
-}
-
-getDataCallBack((error, data) => {
-  if (error) {
-  } else {
-    console.log(data)
-  }
+    resolve('GG, it did not worked!')
+  }, 1500)
 })
+
+luluFunc.then(
+  (data) => {
+    console.log(data)
+  },
+  (error) => {
+    console.log(error)
+  }
+)
