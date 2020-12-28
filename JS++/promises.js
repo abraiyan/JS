@@ -1,17 +1,22 @@
-const makeItDouble = (data) =>
-  new Promise((resolve, reject) => {
-    typeof data === 'number'
-      ? resolve(data * 2)
-      : reject('Input a number number number')
-  })
+const weatherByCityName = (cityName) => {
+  return fetch(
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=b10461359bf7b6e4b19839f0fa739c6b&units=metric`,
+    {}
+  )
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json()
+      } else {
+        throw new Error('GG hobena')
+      }
+    })
+    .then((data) => data.main.temp)
+}
 
-makeItDouble(2)
-  .then((data) => {
-    return makeItDouble(data)
-  })
+weatherByCityName('dhaka')
   .then((data) => {
     console.log(data)
   })
   .catch((error) => {
-    console.log(error)
+    console.log(`Lol ${error}`)
   })
