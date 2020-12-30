@@ -7,8 +7,8 @@ const updatedTime = document.getElementById('last_updated_time')
 
 const todoItem = todoArray.find((item) => item.id === todoID)
 
-if (todoItem == undefined) {
-  location.assign('/JS_Web/index.html')
+if (todoItem === undefined) {
+  location.assign('/TODO/index.html')
 }
 
 todoTitle.value = todoItem.title
@@ -34,5 +34,5 @@ document
   .addEventListener('click', function () {
     removeTodo(todoID)
     saveTodos(todoArray)
-    location.assign('/JS_Web/index.html')
+    location.assign('/TODO/index.html')
   })

@@ -82,7 +82,7 @@ appendChildAtTodoDiv = (item) => {
   todoDiv.appendChild(checkbox)
 
   todoText.textContent = item.title
-  todoText.setAttribute('href', `/JS_Web/edit.html#${item.id}`)
+  todoText.setAttribute('href', `/TODO/edit.html#${item.id}`)
   todoDiv.appendChild(todoText)
 
   document.getElementById('todo_section').appendChild(todoDiv)

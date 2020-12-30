@@ -9,7 +9,7 @@ let notes = getSavedNotes()
 let note = notes.find((note) => note.id === noteId)
 
 if (!note) {
-  location.assign('/index.html')
+  location.assign('/NotesApp/index.html')
 }
 
 titleElement.value = note.title
@@ -33,7 +33,7 @@ bodyElement.addEventListener('input', (e) => {
 removeElement.addEventListener('click', (e) => {
   removeNote(note.id)
   saveNotes(notes)
-  location.assign('/index.html')
+  location.assign('/NotesApp/index.html')
 })
 
 window.addEventListener('storage', (e) => {

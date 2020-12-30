@@ -22,7 +22,10 @@ document
 
 document.getElementById('todo_form').addEventListener('submit', (e) => {
   e.preventDefault()
-  const todoTitle = e.target.elements.addTodo.value
+  const todoTitle =
+    e.target.elements.addTodo.value === ''
+      ? 'Sample'
+      : e.target.elements.addTodo.value
   addItem(todoTitle)
   e.target.elements.addTodo.value = ''
 })
