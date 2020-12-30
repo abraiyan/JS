@@ -9,8 +9,13 @@ window.addEventListener('keypress', (e) => {
 })
 
 const render = () => {
-  puzzleEl.textContent = game1.puzzle
+  puzzleEl.textContent = ''
   guessesEl.textContent = game1.statusMessage
+  game1.puzzle.split('').forEach((letter) => {
+    const letterElement = document.createElement('span')
+    letterElement.textContent = letter
+    puzzleEl.appendChild(letterElement)
+  })
 }
 
 const startGame = async () => {
