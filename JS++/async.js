@@ -1,16 +1,13 @@
-const gettingWeatherData = async (cityName) => {
-  const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=b10461359bf7b6e4b19839f0fa739c6b&units=metric`,
-    {}
-  )
+const gettingPuzzleData = async () => {
+  const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=2`, {})
   if (response.status === 200) {
     const data = await response.json()
-    return data.main.temp
+    return data.puzzle
   } else {
     throw new Error('Something bad happened')
   }
 }
 
-gettingWeatherData(prompt('Enter city name')).then((data) => {
+gettingPuzzleData().then((data) => {
   console.log(data)
 })
