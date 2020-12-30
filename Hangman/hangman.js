@@ -18,6 +18,7 @@ class Hangman {
       this.status = 'playing'
     }
   }
+
   get statusMessage() {
     if (this.status === 'playing') {
       return `Guesses left: ${this.remainingGuesses}`
@@ -27,6 +28,7 @@ class Hangman {
       return 'Great work! You guessed the word.'
     }
   }
+
   get puzzle() {
     let puzzle = ''
 
@@ -40,6 +42,7 @@ class Hangman {
 
     return puzzle
   }
+
   makeGuess(guess) {
     guess = guess.toLowerCase()
     const isUnique = !this.guessedLetters.includes(guess)
