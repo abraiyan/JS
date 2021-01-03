@@ -13,7 +13,7 @@ const weatherByCityName = (cityName) => {
     .then((data) => data.main.temp)
 }
 
-weatherByCityName('dhaka')
+weatherByCityName(prompt('Enter City Name'))
   .then((data) => {
     console.log(data)
   })
