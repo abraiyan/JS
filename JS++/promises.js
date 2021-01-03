@@ -5,7 +5,7 @@ const weatherByCityName = async (cityName) => {
   if (response.status === 200) {
     return response.json()
   } else {
-    throw new Error('GG hobena')
+    throw new Error('Something went wrong along the road.')
   }
 }
 
@@ -14,5 +14,5 @@ weatherByCityName(prompt('Enter City Name'))
     console.log(data.main.temp)
   })
   .catch((error) => {
-    console.log(`Lol ${error}`)
+    console.log('Error', error)
   })
