@@ -57,6 +57,8 @@ removeTodo = (noteID) => {
   const index = todoArray.findIndex((item) => item.id === noteID)
   todoArray.splice(index, 1)
   saveTodos(todoArray)
+  renderTodos(filterObject)
+  countLeftTodos()
 }
 
 makeTodoChecked = (noteID, booleanValue) => {
@@ -69,21 +71,36 @@ makeTodoChecked = (noteID, booleanValue) => {
 }
 
 appendChildAtTodoDiv = (item) => {
-  const todoDiv = document.createElement('div')
+  const todoContainer = document.createElement('div')
+  const todoDiv = document.createElement('label')
   const todoText = document.createElement('a')
   const checkbox = document.createElement('input')
+  const deleteButton = document.createElement('button')
 
   checkbox.addEventListener('change', (e) => {
     makeTodoChecked(item.id, e.target.checked)
   })
 
+  deleteButton.textContent = 'remove'
+  deleteButton.classList.add('button', 'button--text')
+  deleteButton.addEventListener('click', (e) => {
+    removeTodo(item.id)
+  })
+
+  todoText.setAttribute('style', 'color:white')
+
   checkbox.setAttribute('type', 'checkbox')
   checkbox.checked = item.isCompleted
-  todoDiv.appendChild(checkbox)
+  todoContainer.appendChild(checkbox)
+  todoContainer.appendChild(todoText)
+
+  todoDiv.classList.add('list-item')
+  todoContainer.classList.add('list-item__container')
 
   todoText.textContent = item.title
   todoText.setAttribute('href', `/TODO/edit.html#${item.id}`)
-  todoDiv.appendChild(todoText)
+  todoDiv.appendChild(todoContainer)
+  todoDiv.appendChild(deleteButton)
 
   document.getElementById('todo_section').appendChild(todoDiv)
 }
