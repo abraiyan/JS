@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head>
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="/TODO/style/styles.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/67/Microsoft_To-Do_icon.png">
+</head>
 
 <body>
-    <h1>To Do App</h1>
-    <h2 id="left_todos">You have 0 todos left</h2>
-    <input type="text" placeholder="Enter Text" id="search_field">
-    <label>
-        <input type="checkbox" id="hide_completed"> Hide Completed
-    </label>
-    <div id="todo_section">
-
+    <div class="header">
+        <h1 class="header__title">To Do App</h1>
+        <p class="header__subtitle">The simplest todo app</p>
     </div>
-    <form id="todo_form">
-        <input type="text" placeholder="Add Todo" name="addTodo">
-        <button>Add</button>
-    </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <div class="actions">
+        <div class="actions__container">
+            <input type="text" placeholder="Filter Todo" id="search_field" class="input">
+            <label class="checkbox">
+                <input type="checkbox" id="hide_completed"> Hide Completed
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="left_todos">You have 0 todos left</h2>
+        <div id="todo_section"></div>
+        <form id="todo_form">
+            <input type="text" placeholder="Add Todo" name="addTodo" class="input">
+            <button class="button">Add Todo</button>
+        </form>
+    </div>
+
+    <script src="/TODO/scripts/uuidv4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
-    <script src="todo_functions.js"></script>
-    <script src="todo_app.js"></script>
+    <script src="scripts/todo_functions.js"></script>
+    <script src="scripts/todo_app.js"></script>
 </body>
 
 </html>
