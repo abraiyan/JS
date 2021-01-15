@@ -39,12 +39,6 @@ p {
   margin: 1em 0;
 }
 
-@media (max-width: 650px) {
-  .columns {
-    flex-direction: column;
-  }
-}
-
 img {
   width: 100%;
 }
@@ -71,7 +65,20 @@ img {
 }
 
 @media (max-width: 650px) {
+  .columns {
+    flex-direction: column;
+  }
+
   .col {
     width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
   }
 }
