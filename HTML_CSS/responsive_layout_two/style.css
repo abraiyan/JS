@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   padding: 0;
@@ -11,10 +11,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 14%;
+  padding: 30px 12%;
 }
 
-h1 {
+.container {
+  display: flex;
+  padding: 30px 12%;
+  justify-content: space-between;
+}
+
+main {
+  width: 70%;
+}
+
+aside {
+  width: 25%;
+}
+
+.logo {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -70,6 +84,44 @@ button {
   color: white;
   border-color: rgb(255, 27, 95);
   background-color: rgb(255, 27, 95);
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.article-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info,
+.article-body,
+.article-title {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.article-read-more,
+.article-info {
+  font-size: 0.8rem;
+}
+
+.article-read-more {
+  text-decoration: none;
+  color: rgb(255, 27, 95);
+  font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
