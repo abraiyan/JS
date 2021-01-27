@@ -1,0 +1,9 @@
+$bgColors: (
+  'backgroundColor': #32363e,
+  'textColor': white,
+  'navBarColor': #20232a,
+);
+
+@function getBgColor($param) {
+  @return map-get($bgColors, $param);
+}
