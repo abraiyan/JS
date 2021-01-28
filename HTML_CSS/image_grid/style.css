@@ -1,11 +1,30 @@
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 30px 5%;
   font-family: 'Montserrat';
 }
 
-body .title {
+body h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body .header {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .title {
   font-weight: 500;
-  margin-bottom: 30px;
 }
 
 body .container {
