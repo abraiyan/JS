@@ -117,6 +117,20 @@
         </div>
 
     </section>
+
+    <script>
+        const mobileBottunMenu = document.getElementById('mobile-cta')
+        const nav = document.querySelector('nav')
+        const mobileButtonExit = document.getElementById('mobile-exit')
+
+        mobileBottunMenu.addEventListener('click', () => {
+            nav.classList.add('menu-trigger')
+        })
+
+        mobileButtonExit.addEventListener('click', () => {
+            nav.classList.remove('menu-trigger')
+        })
+    </script>
 </body>
 
 </html>
