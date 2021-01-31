@@ -23,6 +23,7 @@
 }
 
 .container .card {
+  text-align: center;
   margin: 16px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
