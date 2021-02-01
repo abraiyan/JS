@@ -187,7 +187,8 @@ header nav ul li a:hover {
 
 .features-section {
   background-color: #232631;
-  padding: 20px;
+  padding: 20px 5em;
+  position: relative;
 }
 
 .features-section ul {
@@ -204,6 +205,14 @@ header nav ul li a:hover {
   padding: 0;
   text-align: center;
   line-height: 1.6em;
+}
+
+@media only screen and (min-width: 1080px) {
+  .features-section ul {
+    display: block;
+    text-align: start;
+    margin-left: 10em;
+  }
 }
 
 .features-section ul li {
@@ -232,6 +241,16 @@ header nav ul li a:hover {
   width: 100%;
 }
 
+@media only screen and (min-width: 1080px) {
+  .features-section img {
+    display: inline;
+    width: 300px;
+    position: absolute;
+    bottom: -40px;
+    right: 40px;
+  }
+}
+
 .testimonials-section {
   padding-bottom: 2em;
   background-color: #1a67f7;
@@ -243,11 +262,28 @@ header nav ul li a:hover {
   text-align: center;
 }
 
+@media only screen and (min-width: 1080px) {
+  .testimonials-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .testimonials-section ul li {
   margin-bottom: 4em;
   background-color: #185ad3;
   border-radius: 10px;
   padding: 16px 26px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .testimonials-section ul li {
+    width: 32%;
+  }
 }
 
 .testimonials-section ul li img {
@@ -263,6 +299,19 @@ header nav ul li a:hover {
 
 .contact-section {
   padding: 2em 2em;
+  position: relative;
+}
+
+@media only screen and (min-width: 1080px) {
+  .contact-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
 }
 
 .contact-section .contact-left h2 {
@@ -309,6 +358,29 @@ header nav ul li a:hover {
   padding: 12px 26px;
   margin-top: 0.5em;
   margin-bottom: 3em;
+}
+
+@media only screen and (min-width: 1080px) {
+  .contact-section .contact-left form input[type='submit'] {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .contact-section .contact-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .contact-section .contact-right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .contact-section .contact-right iframe {
