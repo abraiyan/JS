@@ -11,6 +11,10 @@ p {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #f1f1f1;
   padding: 20px;
   margin-bottom: 4rem;
@@ -49,6 +53,7 @@ header .container .nav-menu {
   margin: 0 auto;
   width: 1080px;
   margin-bottom: 4rem;
+  margin-top: 8rem;
 }
 
 .hero .image-grid {
