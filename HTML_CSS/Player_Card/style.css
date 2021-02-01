@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 5%;
+  background-color: #13141b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .header {
+  width: 1090px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .card-container {
+  border-radius: 4px;
+  background-color: #181922;
+  -webkit-box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+  height: 60vh;
+  width: 1090px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+body .card-container .card {
+  border-radius: 4px;
+  width: 350px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+body .card-container .card .score {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 3rem;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+body .card-container .card button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 30px;
+  background-color: white;
+  color: #13141b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 36px;
+  border: none;
+  -webkit-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+body .card-container .card-one {
+  background-image: url(https://cdn.britannica.com/34/212134-050-A7289400/Lionel-Messi-2018.jpg);
+}
+
+body .card-container .card-two {
+  background-image: url(https://static.highsnobiety.com/thumbor/ag2EzLueAjlezTeI_RfVEsy0Iyc=/1600x1067/static.highsnobiety.com/wp-content/uploads/2020/06/10113250/most-valuable-football-players-2020-01.jpg);
+}
+
+body .card-container .card-three {
+  background-image: url(https://amayei.nyc3.digitaloceanspaces.com/2018/09/salaah.jpg);
+}
+/*# sourceMappingURL=style.css.map */

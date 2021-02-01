@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 5%;
+  background-color: rgb(19, 20, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .header {
+    width: 1090px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-container {
+    border-radius: 4px;
+    background-color: rgb(24, 25, 34);
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+    height: 60vh;
+    width: 1090px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    .card {
+      border-radius: 4px;
+      width: 350px;
+      background-position: center;
+      background-size: cover;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+
+      .score {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 3rem;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 30px;
+        background-color: white;
+        color: rgb(19, 20, 27);
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 36px;
+        border: none;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .card-one {
+      background-image: url(https://cdn.britannica.com/34/212134-050-A7289400/Lionel-Messi-2018.jpg);
+    }
+
+    .card-two {
+      background-image: url(https://static.highsnobiety.com/thumbor/ag2EzLueAjlezTeI_RfVEsy0Iyc=/1600x1067/static.highsnobiety.com/wp-content/uploads/2020/06/10113250/most-valuable-football-players-2020-01.jpg);
+    }
+
+    .card-three {
+      background-image: url(https://amayei.nyc3.digitaloceanspaces.com/2018/09/salaah.jpg);
+    }
+  }
+}
