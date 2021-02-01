@@ -188,16 +188,6 @@ header {
     overflow: hidden;
     position: relative;
 
-    h1 {
-      position: absolute;
-      left: 50%;
-      margin-left: -50px;
-      top: 50%;
-      margin-top: -50px;
-      color: rgb(255, 255, 255);
-      font-size: 2.4rem;
-    }
-
     img {
       width: 100%;
       transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
@@ -246,6 +236,70 @@ header {
 
     p {
       font-size: 1.4rem;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    border: none;
+    padding: 14px 26px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(34, 148, 255);
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(43, 43, 43);
+    }
+  }
+}
+
+.fourth-section-container {
+  background-color: rgb(241, 241, 241);
+  height: 400px;
+
+  .fourth-section {
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+
+    .left {
+      flex: 1;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+        color: rgb(43, 43, 43);
+      }
+
+      p {
+        line-height: 1.4rem;
+      }
+    }
+
+    .right {
+      height: 100%;
+      flex: 1.4;
+      position: relative;
+
+      .image-container {
+        position: absolute;
+        bottom: 0;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
