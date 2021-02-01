@@ -6,6 +6,10 @@
   font-family: 'Montserrat';
 }
 
+body {
+  padding-bottom: 100px;
+}
+
 p {
   font-size: 1.1rem;
 }
@@ -17,7 +21,6 @@ header {
   right: 0;
   background-color: #f1f1f1;
   padding: 20px;
-  margin-bottom: 4rem;
 }
 
 header .container {
@@ -189,6 +192,7 @@ header .container .nav-menu {
 .second-section-container {
   background-color: #f1f1f1;
   padding: 60px 0px;
+  margin-bottom: 4rem;
 }
 
 .second-section {
@@ -248,5 +252,43 @@ header .container .nav-menu {
 .second-section .right img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.third-section {
+  width: 1080px;
+  height: 280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.third-section h1 {
+  font-size: 2rem;
+  color: #2b2b2b;
+  margin-bottom: 1rem;
+}
+
+.third-section h1 span {
+  color: #2294ff;
+}
+
+.third-section div {
+  width: 40%;
+  text-align: center;
+}
+
+.third-section div p {
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */
