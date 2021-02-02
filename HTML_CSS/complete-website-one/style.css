@@ -54,7 +54,8 @@ header .container .nav-menu {
 
 .hero {
   margin: 0 auto;
-  width: 1080px;
+  max-width: 1080px;
+  width: 80%;
   margin-bottom: 3rem;
   margin-top: 8rem;
 }
