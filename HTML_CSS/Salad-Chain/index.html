@@ -33,8 +33,13 @@
 
     </div>
     <div class="right">
-        <img
-            src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" />
+        <div class="image-container">
+            <img class="image" src="./1.jpg" />
+            <img class="image" src="./2.jpg" />
+            <img class="image" src="./3.jpg" />
+            <img class="image" src="./4.jpg" />
+            <img class="image" src="./5.jpg" />
+        </div>
         <div class="button-container">
             <button class="login-button">Login</button>
             <button class="join-button">Join Today</button>
@@ -43,6 +48,33 @@
             See More<i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
     </div>
+
+    <script>
+        const imageContainer = document.querySelector('.image-container')
+        const images = document.querySelectorAll('.image')
+        const button = document.querySelector('.see-more-button')
+
+        let counter = 1
+        let size = images[0].clientWidth
+
+        window.onresize = () => {
+            size = images[counter - 1].clientWidth
+            imageContainer.style.transform = 'translateX(' + (0) + 'px)'
+            counter = 1
+        }
+
+        button.addEventListener('click', () => {
+            if (counter === 5) {
+                counter = 1
+                imageContainer.style.transform = 'translateX(' + (0) + 'px)'
+                return;
+            }
+
+            imageContainer.style.transform = 'translateX(' + (-size * counter) + 'px)'
+            counter++
+        })
+
+    </script>
 </body>
 
 </html>
