@@ -3,15 +3,15 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: 'Open sans';
 }
 
 body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
+  -ms-grid-columns: 250px 5fr;
+      grid-template-columns: 250px 5fr;
   -ms-grid-rows: 80px 1fr;
       grid-template-rows: 80px 1fr;
 }
@@ -32,9 +32,12 @@ body .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.4);
 }
 
 body .left .logo {
+  color: #2c2c2c;
   margin-top: 25px;
   margin-bottom: 60px;
 }
@@ -50,13 +53,15 @@ body .left nav .nav-item {
   position: relative;
   padding: 16px 0;
   padding-left: 50px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
-body .left nav .nav-item:nth-child(1) {
+body .left nav .nav-item:hover {
   background-color: #e2e7ec;
 }
 
-body .left nav .nav-item:nth-child(1) hr {
+body .left nav .nav-item:hover hr {
   opacity: 1;
 }
 
@@ -65,7 +70,7 @@ body .left nav .nav-item hr {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 4px;
+  width: 6px;
   background-color: black;
   opacity: 0;
 }
@@ -75,20 +80,108 @@ body .left nav .nav-item .icon-container {
 }
 
 body .left nav .nav-item .icon-container i {
+  color: #444444;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
 body .left nav .nav-item .text {
+  color: #444444;
   font-size: 1.1rem;
 }
 
-body .navbar {
-  background-color: #afaaaa;
+body .header {
+  background-color: white;
   grid-column: 2 / -1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .input-container {
+  padding: 12px;
+  background-color: #f2f5fa;
+  border-radius: 36px;
+}
+
+body .header .input-container input {
+  background-color: #f2f5fa;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+body .header .input-container span {
+  color: #707070;
+  margin-right: 12px;
+}
+
+body .header .other-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .other-elements button {
+  height: 32px;
+  width: 32px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 16px;
+}
+
+body .header .other-elements .notification-icon-container {
+  position: relative;
+  margin-right: 40px;
+}
+
+body .header .other-elements .notification-icon-container i {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+body .header .other-elements .notification-icon-container .red-circle {
+  position: absolute;
+  right: 0px;
+  top: -3px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+body .header .other-elements .image-container {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-right: 12px;
+}
+
+body .header .other-elements span {
+  font-family: 'Montserrat';
+  font-weight: 600;
 }
 
 body .right {
