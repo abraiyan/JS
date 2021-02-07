@@ -10,13 +10,14 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 250px 5fr;
-      grid-template-columns: 250px 5fr;
+  -ms-grid-columns: 250px 5fr 380px;
+      grid-template-columns: 250px 5fr 380px;
   -ms-grid-rows: 80px 1fr;
       grid-template-rows: 80px 1fr;
 }
 
 body .left {
+  z-index: 5;
   background-color: #f2f5fa;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -32,8 +33,6 @@ body .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.4);
-          box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.4);
 }
 
 body .left .logo {
@@ -65,6 +64,10 @@ body .left nav .nav-item:hover hr {
   opacity: 1;
 }
 
+body .left nav .nav-item:hover .text {
+  font-weight: bold;
+}
+
 body .left nav .nav-item hr {
   position: absolute;
   top: 0;
@@ -80,17 +83,20 @@ body .left nav .nav-item .icon-container {
 }
 
 body .left nav .nav-item .icon-container i {
-  color: #444444;
+  color: #202020;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
 body .left nav .nav-item .text {
-  color: #444444;
+  color: #202020;
   font-size: 1.1rem;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 body .header {
+  z-index: 2;
   background-color: white;
   grid-column: 2 / -1;
   -ms-grid-row: 1;
@@ -106,6 +112,8 @@ body .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.05);
 }
 
 body .header .input-container {
@@ -143,7 +151,7 @@ body .header .other-elements button {
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-right: 16px;
 }
 
@@ -159,8 +167,8 @@ body .header .other-elements .notification-icon-container i {
 
 body .header .other-elements .notification-icon-container .red-circle {
   position: absolute;
-  right: 0px;
-  top: -3px;
+  right: -2px;
+  top: -4px;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -176,7 +184,7 @@ body .header .other-elements .image-container {
   background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
   background-position: center;
   background-size: cover;
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 body .header .other-elements span {
@@ -186,5 +194,114 @@ body .header .other-elements span {
 
 body .right {
   background-color: #e4e1e1;
+  grid-row: 2 / -1;
+}
+
+body .courses {
+  grid-column: 3 / -1;
+  grid-row: 2 / -1;
+  background-color: white;
+  padding: 30px;
+}
+
+body .courses .container {
+  background-color: #f2f5fa;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  padding: 20px 24px;
+}
+
+body .courses .container .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+body .courses .container .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 22px;
+}
+
+body .courses .container .list-item .icon-container {
+  margin-right: 16px;
+  background-color: black;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body .courses .container .list-item .icon-container i {
+  color: white;
+}
+
+body .courses .container .list-item .text-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .courses .container .list-item .text-container .course-name {
+  font-weight: 600;
+  color: #202020;
+}
+
+body .courses .container .list-item .text-container .course-details {
+  font-size: 0.8rem;
+  color: #3a3a3a;
+}
+
+body .courses .container .list-item div {
+  display: inline-block;
+}
+
+body .courses .container .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .courses .container .progress .title {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+body .courses .container .progress .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 160px;
+  margin-bottom: 8px;
+}
+
+body .courses .container .progress .icon-container span {
+  -webkit-transform: scale(7);
+          transform: scale(7);
 }
 /*# sourceMappingURL=style.css.map */
