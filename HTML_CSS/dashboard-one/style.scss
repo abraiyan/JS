@@ -256,6 +256,8 @@ body {
       grid-row: 1fr;
 
       .booking-section {
+        display: grid;
+        place-items: center;
         padding: 20px 30px;
 
         .card {
@@ -297,7 +299,44 @@ body {
       }
 
       .own-classes-section {
-        background-color: rgb(165, 28, 184);
+        display: grid;
+        place-items: center;
+        padding: 20px 30px;
+
+        table {
+          min-width: 100%;
+          border-collapse: collapse;
+          overflow: hidden;
+          border-radius: 8px 8px 0 0;
+
+          thead tr {
+            background-color: black;
+
+            th {
+              color: white;
+              text-align: left;
+            }
+          }
+
+          tbody tr {
+            border-bottom: 1px solid rgba(211, 211, 211, 0.692);
+
+            &:nth-child(2) {
+              background-color: rgb(245, 245, 245);
+            }
+
+            &:last-child {
+              border-bottom: 2px solid black;
+            }
+          }
+
+          th,
+          td {
+            color: rgb(32, 32, 32);
+            padding: 16px 20px;
+            font-size: 1.2rem;
+          }
+        }
       }
     }
   }

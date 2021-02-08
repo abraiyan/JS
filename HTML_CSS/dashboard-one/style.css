@@ -310,6 +310,9 @@ body .right .schedule-section {
 }
 
 body .right .schedule-section .booking-section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   padding: 20px 30px;
 }
 
@@ -352,7 +355,45 @@ body .right .schedule-section .booking-section .card button {
 }
 
 body .right .schedule-section .own-classes-section {
-  background-color: #a51cb8;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 20px 30px;
+}
+
+body .right .schedule-section .own-classes-section table {
+  min-width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+body .right .schedule-section .own-classes-section table thead tr {
+  background-color: black;
+}
+
+body .right .schedule-section .own-classes-section table thead tr th {
+  color: white;
+  text-align: left;
+}
+
+body .right .schedule-section .own-classes-section table tbody tr {
+  border-bottom: 1px solid rgba(211, 211, 211, 0.692);
+}
+
+body .right .schedule-section .own-classes-section table tbody tr:nth-child(2) {
+  background-color: whitesmoke;
+}
+
+body .right .schedule-section .own-classes-section table tbody tr:last-child {
+  border-bottom: 2px solid black;
+}
+
+body .right .schedule-section .own-classes-section table th,
+body .right .schedule-section .own-classes-section table td {
+  color: #202020;
+  padding: 16px 20px;
+  font-size: 1.2rem;
 }
 
 body .courses {
