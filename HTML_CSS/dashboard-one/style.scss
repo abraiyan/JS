@@ -39,12 +39,17 @@ body {
 
         &:hover {
           background-color: #e2e7ec;
+
           hr {
             opacity: 1;
           }
 
           .text {
             font-weight: bold;
+          }
+
+          .icon-container i {
+            transform: scale(1.35);
           }
         }
 
@@ -60,9 +65,11 @@ body {
 
         .icon-container {
           margin-right: 18px;
+
           i {
             color: rgb(32, 32, 32);
             transform: scale(1.3);
+            transition: all 0.1s ease-in;
           }
         }
 
@@ -84,7 +91,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 4px 4px 25px rgba($color: #000000, $alpha: 0.05);
+    box-shadow: 4px 4px 12px rgba($color: #000000, $alpha: 0.05);
 
     .input-container {
       padding: 12px;
@@ -159,8 +166,71 @@ body {
   }
 
   .right {
-    background-color: rgb(228, 225, 225);
+    background-color: rgb(255, 255, 255);
     grid-row: 2 / -1;
+
+    .header-right {
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .dropdown-button {
+        border: 1px solid rgb(87, 87, 87);
+        border-radius: 36px;
+        padding: 8px 28px;
+
+        span {
+          color: rgb(53, 53, 53);
+        }
+
+        i {
+          margin-left: 4px;
+          color: rgb(53, 53, 53);
+        }
+      }
+    }
+
+    .teachers {
+      .teacher-item {
+        padding: 14px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .avatar {
+          height: 50px;
+          width: 50px;
+          background-size: cover;
+          background-position: center;
+          border-radius: 50%;
+          margin-right: 24px;
+        }
+
+        .teacher-item-name {
+          font-weight: 600;
+          flex: 1;
+        }
+
+        .techer-item-details {
+          flex: 1;
+        }
+
+        .techer-item-rate {
+          flex: 1;
+        }
+
+        i {
+          transform: scale(1.4);
+        }
+      }
+    }
   }
 
   .courses {
@@ -178,7 +248,7 @@ body {
 
       .title {
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 25px;
       }
 
@@ -225,6 +295,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .title {
           margin-top: 25px;
           font-size: 1.2rem;
