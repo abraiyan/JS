@@ -204,6 +204,12 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        &:nth-child(3) {
+          i {
+            color: rgb(41, 41, 41);
+          }
+        }
+
         .avatar {
           height: 50px;
           width: 50px;
@@ -227,6 +233,7 @@ body {
         }
 
         i {
+          color: rgb(172, 172, 172);
           transform: scale(1.4);
         }
       }

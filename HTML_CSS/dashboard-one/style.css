@@ -251,6 +251,10 @@ body .right .teachers .teacher-item {
           align-items: center;
 }
 
+body .right .teachers .teacher-item:nth-child(3) i {
+  color: #292929;
+}
+
 body .right .teachers .teacher-item .avatar {
   height: 50px;
   width: 50px;
@@ -280,6 +284,7 @@ body .right .teachers .teacher-item .techer-item-rate {
 }
 
 body .right .teachers .teacher-item i {
+  color: #acacac;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
