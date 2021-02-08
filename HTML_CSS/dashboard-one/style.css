@@ -102,6 +102,23 @@ body .left nav .nav-item .text {
   transition: all 0.1s ease-in;
 }
 
+body .left .footer {
+  margin-top: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body .left .footer hr {
+  color: #949494;
+  width: 180px;
+  margin-bottom: 8px;
+}
+
+body .left .footer p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 body .header {
   z-index: 2;
   background-color: white;
