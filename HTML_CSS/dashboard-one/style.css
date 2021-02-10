@@ -6,6 +6,10 @@
   font-family: 'Open sans';
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   height: 100vh;
   display: -ms-grid;
@@ -37,8 +41,9 @@ body .left {
 
 body .left .logo {
   color: #2c2c2c;
-  margin-top: 25px;
-  margin-bottom: 60px;
+  margin-top: 2.5rem;
+  margin-bottom: 6rem;
+  font-size: 3rem;
 }
 
 body .left nav {
@@ -50,8 +55,8 @@ body .left nav {
 
 body .left nav .nav-item {
   position: relative;
-  padding: 16px 0;
-  padding-left: 50px;
+  padding: 1.6rem 0;
+  padding-left: 5rem;
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
@@ -84,10 +89,11 @@ body .left nav .nav-item hr {
 }
 
 body .left nav .nav-item .icon-container {
-  margin-right: 18px;
+  margin-right: 1.8rem;
 }
 
 body .left nav .nav-item .icon-container i {
+  font-size: 1.4rem;
   color: #202020;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
@@ -97,7 +103,7 @@ body .left nav .nav-item .icon-container i {
 
 body .left nav .nav-item .text {
   color: #202020;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
@@ -109,14 +115,14 @@ body .left .footer {
 }
 
 body .left .footer hr {
-  color: #949494;
+  color: #cccccc;
   width: 180px;
   margin-bottom: 8px;
 }
 
 body .left .footer p {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 body .header {
@@ -126,7 +132,7 @@ body .header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  padding: 0 30px;
+  padding: 0 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,21 +147,22 @@ body .header {
 }
 
 body .header .input-container {
-  padding: 12px;
+  padding: 1.2rem;
   background-color: #f2f5fa;
-  border-radius: 36px;
+  border-radius: 3.6rem;
 }
 
 body .header .input-container input {
   background-color: #f2f5fa;
   border: none;
   outline: none;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 
 body .header .input-container span {
   color: #707070;
-  margin-right: 12px;
+  margin-right: 1.2rem;
+  font-size: 1.6rem;
 }
 
 body .header .other-elements {
@@ -168,30 +175,29 @@ body .header .other-elements {
 }
 
 body .header .other-elements button {
-  height: 32px;
-  width: 32px;
+  height: 3.2rem;
+  width: 3.2rem;
   background-color: black;
   border: none;
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-right: 16px;
+  font-size: 1.6rem;
+  margin-right: 1.4rem;
 }
 
 body .header .other-elements .notification-icon-container {
   position: relative;
-  margin-right: 40px;
+  margin-right: 2.6rem;
 }
 
 body .header .other-elements .notification-icon-container i {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  font-size: 1.8rem;
 }
 
 body .header .other-elements .notification-icon-container .red-circle {
   position: absolute;
-  right: -2px;
+  right: 0;
   top: -4px;
   display: inline-block;
   width: 10px;
@@ -208,12 +214,13 @@ body .header .other-elements .image-container {
   background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
   background-position: center;
   background-size: cover;
-  margin-right: 14px;
+  margin-right: 1rem;
 }
 
 body .header .other-elements span {
   font-family: 'Montserrat';
   font-weight: 600;
+  font-size: 1.4rem;
 }
 
 body .right {
