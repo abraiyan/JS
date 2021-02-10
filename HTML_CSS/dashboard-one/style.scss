@@ -199,24 +199,26 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 30px;
+      padding: 2rem 3rem;
 
       .title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 700;
       }
 
       .dropdown-button {
         border: 1px solid rgb(87, 87, 87);
-        border-radius: 36px;
-        padding: 8px 28px;
+        border-radius: 3.6rem;
+        padding: 0.8rem 2.8rem;
 
         span {
           color: rgb(53, 53, 53);
+          font-size: 1.2rem;
         }
 
         i {
-          margin-left: 4px;
+          margin-left: 0.4rem;
+          font-size: 1.2rem;
           color: rgb(53, 53, 53);
         }
       }
@@ -224,7 +226,7 @@ body {
 
     .teachers {
       .teacher-item {
-        padding: 14px 30px;
+        padding: 1.4rem 3rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -236,30 +238,35 @@ body {
         }
 
         .avatar {
-          height: 50px;
-          width: 50px;
+          height: 4.5rem;
+          width: 4.5rem;
           background-size: cover;
           background-position: center;
           border-radius: 50%;
-          margin-right: 24px;
+          margin-right: 2.4rem;
         }
 
         .teacher-item-name {
           font-weight: 600;
           flex: 1;
+          font-size: 1.4rem;
+          color: rgb(49, 49, 49);
         }
 
         .techer-item-details {
           flex: 1;
+          font-size: 1.2rem;
         }
 
         .techer-item-rate {
           flex: 1;
+          font-size: 1.2rem;
+          color: rgb(92, 92, 92);
         }
 
         i {
           color: rgb(172, 172, 172);
-          transform: scale(1.4);
+          font-size: 1.6rem;
         }
       }
     }
@@ -286,38 +293,38 @@ body {
         padding: 20px 30px;
 
         .card {
-          padding: 20px 16px;
-          border-radius: 30px;
+          padding: 2rem 1.6rem;
+          border-radius: 3rem;
           text-align: center;
           background-color: $backgroundColor;
           .avatar {
             margin: 0 auto;
-            width: 80px;
-            height: 80px;
+            width: 8rem;
+            height: 8rem;
             border-radius: 50%;
             background-position: center;
             background-size: cover;
-            margin-bottom: 16px;
+            margin-bottom: 1.6rem;
           }
 
           .title {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.8rem;
             margin-bottom: 8px;
           }
 
           .details {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             color: rgb(73, 73, 73);
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
           }
 
           button {
             background-color: rgb(32, 32, 32);
             color: white;
             border: none;
-            padding: 10px 25px;
-            border-radius: 36px;
+            padding: 1rem 2.5rem;
+            border-radius: 3.6rem;
             font-weight: 600;
           }
         }
@@ -326,7 +333,7 @@ body {
       .own-classes-section {
         display: grid;
         place-items: center;
-        padding: 20px 30px;
+        padding: 2rem 3rem;
 
         table {
           min-width: 100%;
@@ -347,7 +354,7 @@ body {
             border-bottom: 1px solid rgba(211, 211, 211, 0.692);
 
             &:nth-child(2) {
-              background-color: rgb(245, 245, 245);
+              background-color: rgb(248, 248, 248);
             }
 
             &:last-child {
@@ -358,8 +365,8 @@ body {
           th,
           td {
             color: rgb(32, 32, 32);
-            padding: 16px 20px;
-            font-size: 1.2rem;
+            padding: 1.6rem 2rem;
+            font-size: 1.4rem;
           }
         }
       }
@@ -370,7 +377,7 @@ body {
     grid-column: 3 / -1;
     grid-row: 2 / -1;
     background-color: white;
-    padding: 30px;
+    padding: 3rem;
 
     .container {
       display: flex;
@@ -378,32 +385,33 @@ body {
       background-color: $backgroundColor;
       width: 100%;
       height: 100%;
-      border-radius: 28px;
-      padding: 20px 24px;
+      border-radius: 2.8rem;
+      padding: 2rem 2.4rem;
 
       .title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 25px;
+        margin-bottom: 2.5rem;
       }
 
       .list-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 22px;
+        margin-bottom: 2.2rem;
 
         .icon-container {
-          margin-right: 16px;
+          margin-right: 1.6rem;
           background-color: black;
-          width: 36px;
-          height: 36px;
+          width: 3.6rem;
+          height: 3.6rem;
           border-radius: 50%;
           display: grid;
           place-items: center;
 
           i {
             color: white;
+            font-size: 1.4rem;
           }
         }
 
@@ -413,16 +421,17 @@ body {
           .course-name {
             font-weight: 600;
             color: rgb(32, 32, 32);
+            font-size: 1.4rem;
           }
 
           .course-details {
-            font-size: 0.8rem;
+            font-size: 1.2rem;
             color: rgb(58, 58, 58);
           }
         }
 
-        div {
-          display: inline-block;
+        .trailing-icon {
+          font-size: 1.4rem;
         }
       }
 
@@ -431,25 +440,29 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
 
         .title {
-          margin-top: 25px;
-          font-size: 1.2rem;
+          margin-top: 2.5rem;
+          font-size: 2rem;
           font-weight: 600;
-          margin-bottom: 20px;
+          margin-bottom: 2rem;
         }
 
         .icon-container {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 160px;
-          margin-bottom: 8px;
+          height: 16rem;
+          margin-bottom: 0.8rem;
 
           span {
             transform: scale(7);
           }
+        }
+
+        .progress-text {
+          font-size: 1.4rem;
         }
       }
     }

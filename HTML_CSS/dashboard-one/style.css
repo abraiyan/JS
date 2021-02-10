@@ -239,31 +239,33 @@ body .right .header-right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
 }
 
 body .right .header-right .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 body .right .header-right .dropdown-button {
   border: 1px solid #575757;
-  border-radius: 36px;
-  padding: 8px 28px;
+  border-radius: 3.6rem;
+  padding: 0.8rem 2.8rem;
 }
 
 body .right .header-right .dropdown-button span {
   color: #353535;
+  font-size: 1.2rem;
 }
 
 body .right .header-right .dropdown-button i {
-  margin-left: 4px;
+  margin-left: 0.4rem;
+  font-size: 1.2rem;
   color: #353535;
 }
 
 body .right .teachers .teacher-item {
-  padding: 14px 30px;
+  padding: 1.4rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,12 +282,12 @@ body .right .teachers .teacher-item:nth-child(3) i {
 }
 
 body .right .teachers .teacher-item .avatar {
-  height: 50px;
-  width: 50px;
+  height: 4.5rem;
+  width: 4.5rem;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  margin-right: 24px;
+  margin-right: 2.4rem;
 }
 
 body .right .teachers .teacher-item .teacher-item-name {
@@ -293,24 +295,28 @@ body .right .teachers .teacher-item .teacher-item-name {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.4rem;
+  color: #313131;
 }
 
 body .right .teachers .teacher-item .techer-item-details {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.2rem;
 }
 
 body .right .teachers .teacher-item .techer-item-rate {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.2rem;
+  color: #5c5c5c;
 }
 
 body .right .teachers .teacher-item i {
   color: #acacac;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  font-size: 1.6rem;
 }
 
 body .right .schedule-header .dropdown-button {
@@ -341,40 +347,40 @@ body .right .schedule-section .booking-section {
 }
 
 body .right .schedule-section .booking-section .card {
-  padding: 20px 16px;
-  border-radius: 30px;
+  padding: 2rem 1.6rem;
+  border-radius: 3rem;
   text-align: center;
   background-color: #f2f5fa;
 }
 
 body .right .schedule-section .booking-section .card .avatar {
   margin: 0 auto;
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 body .right .schedule-section .booking-section .card .title {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   margin-bottom: 8px;
 }
 
 body .right .schedule-section .booking-section .card .details {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #494949;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 body .right .schedule-section .booking-section .card button {
   background-color: #202020;
   color: white;
   border: none;
-  padding: 10px 25px;
-  border-radius: 36px;
+  padding: 1rem 2.5rem;
+  border-radius: 3.6rem;
   font-weight: 600;
 }
 
@@ -382,7 +388,7 @@ body .right .schedule-section .own-classes-section {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
 }
 
 body .right .schedule-section .own-classes-section table {
@@ -406,7 +412,7 @@ body .right .schedule-section .own-classes-section table tbody tr {
 }
 
 body .right .schedule-section .own-classes-section table tbody tr:nth-child(2) {
-  background-color: whitesmoke;
+  background-color: #f8f8f8;
 }
 
 body .right .schedule-section .own-classes-section table tbody tr:last-child {
@@ -416,15 +422,15 @@ body .right .schedule-section .own-classes-section table tbody tr:last-child {
 body .right .schedule-section .own-classes-section table th,
 body .right .schedule-section .own-classes-section table td {
   color: #202020;
-  padding: 16px 20px;
-  font-size: 1.2rem;
+  padding: 1.6rem 2rem;
+  font-size: 1.4rem;
 }
 
 body .courses {
   grid-column: 3 / -1;
   grid-row: 2 / -1;
   background-color: white;
-  padding: 30px;
+  padding: 3rem;
 }
 
 body .courses .container {
@@ -438,14 +444,14 @@ body .courses .container {
   background-color: #f2f5fa;
   width: 100%;
   height: 100%;
-  border-radius: 28px;
-  padding: 20px 24px;
+  border-radius: 2.8rem;
+  padding: 2rem 2.4rem;
 }
 
 body .courses .container .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 body .courses .container .list-item {
@@ -458,14 +464,14 @@ body .courses .container .list-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 22px;
+  margin-bottom: 2.2rem;
 }
 
 body .courses .container .list-item .icon-container {
-  margin-right: 16px;
+  margin-right: 1.6rem;
   background-color: black;
-  width: 36px;
-  height: 36px;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   display: -ms-grid;
   display: grid;
@@ -474,6 +480,7 @@ body .courses .container .list-item .icon-container {
 
 body .courses .container .list-item .icon-container i {
   color: white;
+  font-size: 1.4rem;
 }
 
 body .courses .container .list-item .text-container {
@@ -485,15 +492,16 @@ body .courses .container .list-item .text-container {
 body .courses .container .list-item .text-container .course-name {
   font-weight: 600;
   color: #202020;
+  font-size: 1.4rem;
 }
 
 body .courses .container .list-item .text-container .course-details {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: #3a3a3a;
 }
 
-body .courses .container .list-item div {
-  display: inline-block;
+body .courses .container .list-item .trailing-icon {
+  font-size: 1.4rem;
 }
 
 body .courses .container .progress {
@@ -508,14 +516,14 @@ body .courses .container .progress {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 body .courses .container .progress .title {
-  margin-top: 25px;
-  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 body .courses .container .progress .icon-container {
@@ -528,12 +536,16 @@ body .courses .container .progress .icon-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 160px;
-  margin-bottom: 8px;
+  height: 16rem;
+  margin-bottom: 0.8rem;
 }
 
 body .courses .container .progress .icon-container span {
   -webkit-transform: scale(7);
           transform: scale(7);
+}
+
+body .courses .container .progress .progress-text {
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */
