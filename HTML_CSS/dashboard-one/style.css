@@ -110,7 +110,7 @@ body .left nav .nav-item .text {
 
 body .left .footer {
   margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -200,16 +200,16 @@ body .header .other-elements .notification-icon-container .red-circle {
   right: 0;
   top: -4px;
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: red;
 }
 
 body .header .other-elements .image-container {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
   background-position: center;
@@ -328,7 +328,7 @@ body .right .schedule-header .dropdown-button i {
 
 body .right .schedule-section {
   width: 100%;
-  height: 320px;
+  height: 32rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr;
@@ -341,7 +341,7 @@ body .right .schedule-section .booking-section {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
 }
 
 body .right .schedule-section .booking-section .card {
@@ -364,7 +364,7 @@ body .right .schedule-section .booking-section .card .avatar {
 body .right .schedule-section .booking-section .card .title {
   font-weight: 700;
   font-size: 1.8rem;
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 }
 
 body .right .schedule-section .booking-section .card .details {
