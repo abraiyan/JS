@@ -40,7 +40,7 @@ body .left {
 }
 
 body .left .logo {
-  color: #2c2c2c;
+  color: #202020;
   margin-top: 2.5rem;
   margin-bottom: 6rem;
   font-size: 3rem;
@@ -224,12 +224,10 @@ body .header .other-elements span {
 }
 
 body .right {
-  background-color: white;
   grid-row: 2 / -1;
 }
 
 body .right .header-right {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,20 +246,20 @@ body .right .header-right .title {
 }
 
 body .right .header-right .dropdown-button {
-  border: 1px solid #575757;
+  border: 1px solid #202020;
   border-radius: 3.6rem;
   padding: 0.8rem 2.8rem;
 }
 
 body .right .header-right .dropdown-button span {
-  color: #353535;
+  color: #202020;
   font-size: 1.2rem;
 }
 
 body .right .header-right .dropdown-button i {
   margin-left: 0.4rem;
   font-size: 1.2rem;
-  color: #353535;
+  color: #202020;
 }
 
 body .right .teachers .teacher-item {
@@ -278,7 +276,7 @@ body .right .teachers .teacher-item {
 }
 
 body .right .teachers .teacher-item:nth-child(3) i {
-  color: #292929;
+  color: #202020;
 }
 
 body .right .teachers .teacher-item .avatar {
@@ -296,7 +294,7 @@ body .right .teachers .teacher-item .teacher-item-name {
       -ms-flex: 1;
           flex: 1;
   font-size: 1.4rem;
-  color: #313131;
+  color: #202020;
 }
 
 body .right .teachers .teacher-item .techer-item-details {
@@ -320,7 +318,7 @@ body .right .teachers .teacher-item i {
 }
 
 body .right .schedule-header .dropdown-button {
-  background-color: #202020;
+  background-color: black;
 }
 
 body .right .schedule-header .dropdown-button span,
@@ -371,12 +369,12 @@ body .right .schedule-section .booking-section .card .title {
 
 body .right .schedule-section .booking-section .card .details {
   font-size: 1.2rem;
-  color: #494949;
+  color: #202020;
   margin-bottom: 2rem;
 }
 
 body .right .schedule-section .booking-section .card button {
-  background-color: #202020;
+  background-color: black;
   color: white;
   border: none;
   padding: 1rem 2.5rem;
@@ -497,7 +495,7 @@ body .courses .container .list-item .text-container .course-name {
 
 body .courses .container .list-item .text-container .course-details {
   font-size: 1.2rem;
-  color: #3a3a3a;
+  color: #202020;
 }
 
 body .courses .container .list-item .trailing-icon {
@@ -524,6 +522,7 @@ body .courses .container .progress .title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  color: #202020;
 }
 
 body .courses .container .progress .icon-container {
@@ -543,9 +542,11 @@ body .courses .container .progress .icon-container {
 body .courses .container .progress .icon-container span {
   -webkit-transform: scale(7);
           transform: scale(7);
+  color: #202020;
 }
 
 body .courses .container .progress .progress-text {
   font-size: 1.4rem;
+  color: #202020;
 }
 /*# sourceMappingURL=style.css.map */

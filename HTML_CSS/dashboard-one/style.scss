@@ -26,7 +26,7 @@ body {
     align-items: center;
 
     .logo {
-      color: rgb(44, 44, 44);
+      color: $textColorTwo;
       margin-top: 2.5rem;
       margin-bottom: 6rem;
       font-size: 3rem;
@@ -43,7 +43,7 @@ body {
         transition: all 0.1s ease-in;
 
         &:hover {
-          background-color: #e2e7ec;
+          background-color: $hoverColor;
 
           hr {
             opacity: 1;
@@ -64,7 +64,7 @@ body {
           bottom: 0;
           left: 0;
           width: 6px;
-          background-color: black;
+          background-color: $textColorOne;
           opacity: 0;
         }
 
@@ -73,14 +73,14 @@ body {
 
           i {
             font-size: 1.4rem;
-            color: rgb(32, 32, 32);
+            color: $textColorTwo;
             transform: scale(1.3);
             transition: all 0.1s ease-in;
           }
         }
 
         .text {
-          color: rgb(32, 32, 32);
+          color: $textColorTwo;
           font-size: 1.5rem;
           transition: all 0.1s ease-in;
         }
@@ -129,7 +129,7 @@ body {
       }
 
       span {
-        color: rgb(112, 112, 112);
+        color: $iconColorLight;
         margin-right: 1.2rem;
         font-size: 1.6rem;
       }
@@ -191,11 +191,9 @@ body {
   }
 
   .right {
-    background-color: rgb(255, 255, 255);
     grid-row: 2 / -1;
 
     .header-right {
-      background-color: rgb(255, 255, 255);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -207,19 +205,19 @@ body {
       }
 
       .dropdown-button {
-        border: 1px solid rgb(87, 87, 87);
+        border: 1px solid $textColorTwo;
         border-radius: 3.6rem;
         padding: 0.8rem 2.8rem;
 
         span {
-          color: rgb(53, 53, 53);
+          color: $textColorTwo;
           font-size: 1.2rem;
         }
 
         i {
           margin-left: 0.4rem;
           font-size: 1.2rem;
-          color: rgb(53, 53, 53);
+          color: $textColorTwo;
         }
       }
     }
@@ -233,7 +231,7 @@ body {
 
         &:nth-child(3) {
           i {
-            color: rgb(41, 41, 41);
+            color: $textColorTwo;
           }
         }
 
@@ -250,7 +248,7 @@ body {
           font-weight: 600;
           flex: 1;
           font-size: 1.4rem;
-          color: rgb(49, 49, 49);
+          color: $textColorTwo;
         }
 
         .techer-item-details {
@@ -265,14 +263,14 @@ body {
         }
 
         i {
-          color: rgb(172, 172, 172);
+          color: $iconColorLightExtra;
           font-size: 1.6rem;
         }
       }
     }
 
     .schedule-header .dropdown-button {
-      background-color: rgb(32, 32, 32);
+      background-color: $textColorOne;
 
       span,
       i {
@@ -315,12 +313,12 @@ body {
 
           .details {
             font-size: 1.2rem;
-            color: rgb(73, 73, 73);
+            color: $textColorTwo;
             margin-bottom: 2rem;
           }
 
           button {
-            background-color: rgb(32, 32, 32);
+            background-color: $textColorOne;
             color: white;
             border: none;
             padding: 1rem 2.5rem;
@@ -364,7 +362,7 @@ body {
 
           th,
           td {
-            color: rgb(32, 32, 32);
+            color: $textColorTwo;
             padding: 1.6rem 2rem;
             font-size: 1.4rem;
           }
@@ -420,13 +418,13 @@ body {
 
           .course-name {
             font-weight: 600;
-            color: rgb(32, 32, 32);
+            color: $textColorTwo;
             font-size: 1.4rem;
           }
 
           .course-details {
             font-size: 1.2rem;
-            color: rgb(58, 58, 58);
+            color: $textColorTwo;
           }
         }
 
@@ -447,6 +445,7 @@ body {
           font-size: 2rem;
           font-weight: 600;
           margin-bottom: 2rem;
+          color: $textColorTwo;
         }
 
         .icon-container {
@@ -458,11 +457,13 @@ body {
 
           span {
             transform: scale(7);
+            color: $textColorTwo;
           }
         }
 
         .progress-text {
           font-size: 1.4rem;
+          color: $textColorTwo;
         }
       }
     }
