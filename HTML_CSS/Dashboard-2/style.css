@@ -443,18 +443,20 @@ body .dashboard .details {
   padding: 0 3rem;
 }
 
-body .dashboard .details .section-1 .title {
-  font-size: 2.6rem;
+body .dashboard .details .section-top .title {
+  font-size: 2.2rem;
   color: #536585;
   font-weight: 300;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
-body .dashboard .details .section-1 .title b {
-  font-weight: 600;
+body .dashboard .details .section-top .title b {
+  font-weight: 700;
+  color: #1c203a;
 }
 
-body .dashboard .details .section-1 .cards-container {
+body .dashboard .details .section-top .cards-container {
   height: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,34 +467,35 @@ body .dashboard .details .section-1 .cards-container {
   gap: 2rem;
 }
 
-body .dashboard .details .section-1 .cards-container .card {
+body .dashboard .details .section-top .cards-container .card {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-radius: 0.8rem;
   padding: 1.3rem;
   background-color: #ffb800;
 }
 
-body .dashboard .details .section-1 .cards-container .card-one {
+body .dashboard .details .section-top .cards-container .card-one {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-body .dashboard .details .section-1 .cards-container .card-two {
+body .dashboard .details .section-top .cards-container .card-two {
   -webkit-box-flex: 1.6;
       -ms-flex: 1.6;
           flex: 1.6;
   background-color: #f4f7ff;
 }
 
-body .dashboard .details .section-1 .cards-container .card-three {
+body .dashboard .details .section-top .cards-container .card-three {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-body .dashboard .details .section-1 .cards-container .card-four {
+body .dashboard .details .section-top .cards-container .card-four {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;

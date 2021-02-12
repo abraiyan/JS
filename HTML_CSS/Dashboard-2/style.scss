@@ -111,7 +111,7 @@ body {
           padding: 2rem 2rem 1rem 2rem;
 
           button {
-            background-color: #ffb800;
+            background-color: $accentColorOne;
             border: none;
             border-radius: 3.6rem;
             padding: 0.6rem 1.5rem;
@@ -372,15 +372,17 @@ body {
     .details {
       padding: 0 3rem;
 
-      .section-1 {
+      .section-top {
         .title {
-          font-size: 2.6rem;
+          font-size: 2.2rem;
           color: $textColorOne;
           font-weight: 300;
-          margin-bottom: 1.6rem;
+          margin-bottom: 2rem;
+          margin-top: 1rem;
 
           b {
-            font-weight: 600;
+            font-weight: 700;
+            color: $textColorTwo;
           }
         }
 
@@ -392,8 +394,9 @@ body {
 
           .card {
             flex: 1;
+            border-radius: 0.8rem;
             padding: 1.3rem;
-            background-color: #ffb800;
+            background-color: $accentColorOne;
           }
 
           .card-one {
