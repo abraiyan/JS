@@ -7,12 +7,28 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+h1,
+p {
+  color: #1c203a;
+}
+
 html {
   font-size: 62.5%;
 }
 
-button {
+.hoverable {
   cursor: pointer;
+}
+
+.hoverable-icon {
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.hoverable-icon:hover {
+  background-color: #f4f7ff;
+  color: #0e5df7;
+  font-size: 2.5rem;
 }
 
 body .dashboard {
@@ -47,16 +63,13 @@ body .dashboard .icon-panel {
   color: #40506f;
 }
 
-body .dashboard .icon-panel .heading-logo-container {
+body .dashboard .icon-panel .logo-container {
   display: -ms-grid;
   display: grid;
   place-items: center;
   width: 100%;
   height: 80px;
   border-bottom: 1px solid rgba(214, 214, 214, 0.6);
-}
-
-body .dashboard .icon-panel .heading-logo-container .main-icon {
   font-size: 3rem;
 }
 
@@ -78,38 +91,21 @@ body .dashboard .icon-panel .middle-icons span {
   width: 80px;
   text-align: center;
   height: 80px;
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
 }
 
-body .dashboard .icon-panel .middle-icons span:hover {
-  background-color: #f4f7ff;
-  color: #0E5DF7;
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-body .dashboard .icon-panel .trailing-logo-container {
-  color: #c9c9c9;
+body .dashboard .icon-panel .sign-out-icon {
   display: -ms-grid;
   display: grid;
   place-items: center;
   width: 100%;
   height: 80px;
+  color: #c9c9c9;
   border-top: 1px solid rgba(214, 214, 214, 0.6);
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-body .dashboard .icon-panel .trailing-logo-container:hover {
-  color: #0E5DF7;
-  background-color: #f4f7ff;
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-body .dashboard .icon-panel .trailing-logo-container .trailing-icon {
   font-size: 2.2rem;
+}
+
+body .dashboard .icon-panel .sign-out-icon:hover {
+  color: #0e5df7;
 }
 
 body .dashboard .inbox {
@@ -144,7 +140,6 @@ body .dashboard .inbox .dashboard-title {
   height: 80px;
   padding: 2rem;
   font-size: 2rem;
-  border-bottom: 1px solid rgba(214, 214, 214, 0.6);
 }
 
 body .dashboard .inbox .task-overview .list-header {
@@ -154,29 +149,30 @@ body .dashboard .inbox .task-overview .list-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 2rem 1rem 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 body .dashboard .inbox .task-overview .list-header button {
   background-color: #ffb800;
   border: none;
-  border-radius: 36px;
+  border-radius: 3.6rem;
   padding: 0.6rem 1.5rem;
   font-weight: 600;
   font-size: 1.2rem;
+  color: #1c203a;
 }
 
 body .dashboard .inbox .task-overview .list-header span {
   font-size: 1.3rem;
-  color: #0E5DF7;
+  color: #0e5df7;
   font-weight: 500;
 }
 
 body .dashboard .inbox .task-overview .list-header span b {
-  color: black;
+  color: #1c203a;
 }
 
 body .dashboard .inbox .task-overview .list-view .list-item {
@@ -198,7 +194,7 @@ body .dashboard .inbox .task-overview .list-view .list-item:last-child {
 }
 
 body .dashboard .inbox .task-overview .list-view .list-item .text-container .title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
 }
@@ -210,25 +206,22 @@ body .dashboard .inbox .task-overview .list-view .list-item .text-container .sub
 }
 
 body .dashboard .inbox .task-overview .list-view .list-item .icon-container {
-  height: 2.2rem;
-  width: 2.2rem;
-  border-radius: 50%;
-  background-color: #d3ddff;
   display: -ms-grid;
   display: grid;
   place-items: center;
-}
-
-body .dashboard .inbox .task-overview .list-view .list-item .icon-container span {
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  background-color: #e4eaff;
   margin-left: 0.2rem;
   margin-bottom: 0.1rem;
-  color: #0E5DF7;
+  color: #0e5df7;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 body .dashboard .inbox .new-project__button {
-  margin: 1rem auto;
+  margin: 2rem auto;
   width: 72%;
   padding: 1rem 1.5rem;
   display: -webkit-box;
@@ -240,17 +233,18 @@ body .dashboard .inbox .new-project__button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0E5DF7;
+  background-color: #0e5df7;
   border: none;
   border-radius: 0.4rem;
   color: white;
-  -webkit-box-shadow: 8px 8px 16px rgba(14, 93, 247, 0.4);
-          box-shadow: 8px 8px 16px rgba(14, 93, 247, 0.4);
+  -webkit-box-shadow: 8px 8px 16px rgba(14, 93, 247, 0.42);
+          box-shadow: 8px 8px 16px rgba(14, 93, 247, 0.42);
 }
 
 body .dashboard .inbox .new-project__button .leading-icon {
   font-weight: 600;
   font-size: 1.8rem;
+  margin-right: 0.2rem;
 }
 
 body .dashboard .inbox .new-project__button .title {
@@ -260,32 +254,36 @@ body .dashboard .inbox .new-project__button .title {
 }
 
 body .dashboard .inbox .stat-section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: auto;
+  margin-bottom: 3rem;
   padding: 0 2rem;
 }
 
 body .dashboard .inbox .stat-section .stat-section-title {
   font-weight: 700;
   font-size: 1.7rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
 }
 
 body .dashboard .inbox .stat-section .stat-section-subtitle {
   font-size: 1.2rem;
   font-weight: 600;
   color: #536585;
-  margin-bottom: 2rem;
+  margin-bottom: 0.6rem;
 }
 
 body .dashboard .inbox .stat-section .image {
-  width: 12rem;
-  height: 100%;
-  background-image: url(./image.png);
+  width: 20rem;
+  height: 20rem;
+  background-image: url(./image.svg);
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 body .dashboard .inbox .stat-section .stat-section-details {
@@ -298,7 +296,7 @@ body .dashboard .inbox .stat-section .bottom-button {
   width: 10rem;
   border: none;
   background-color: transparent;
-  color: #0E5DF7;
+  color: #0e5df7;
   border-radius: 0.4rem;
   font-weight: 600;
 }
@@ -373,7 +371,7 @@ body .dashboard .header .right-section .button-left .leading-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #0E5DF7;
+  background-color: #0e5df7;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -392,7 +390,7 @@ body .dashboard .header .right-section .button-left .text-container .title {
 body .dashboard .header .right-section .button-left .text-container .subtitle {
   font-weight: 700;
   font-size: 1.2rem;
-  color: #0E5DF7;
+  color: #0e5df7;
 }
 
 body .dashboard .header .right-section .button-left .bottom-arrow {
@@ -493,6 +491,6 @@ body .dashboard .details .section-1 .cards-container .card-four {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: #F4F7FF;
+  background-color: #f4f7ff;
 }
 /*# sourceMappingURL=style.css.map */
