@@ -400,12 +400,10 @@ body {
             border-radius: 0.8rem;
           }
 
-          .card-one {
-            flex: 1;
+          .common-card-style {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-color: $accentColorOne;
 
             .top {
               padding: 0 1.5rem;
@@ -466,6 +464,11 @@ body {
               border: none;
               padding-bottom: 0;
             }
+          }
+
+          .card-one {
+            flex: 1;
+            background-color: $accentColorOne;
           }
 
           .card-two {
