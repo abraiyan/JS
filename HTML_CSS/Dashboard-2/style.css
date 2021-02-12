@@ -193,10 +193,27 @@ body .dashboard .inbox .task-overview .list-view .list-item:last-child {
   border: none;
 }
 
+body .dashboard .inbox .task-overview .list-view .list-item:nth-child(-n + 2) .text-container .title {
+  margin-left: 1.2rem;
+}
+
+body .dashboard .inbox .task-overview .list-view .list-item:nth-child(-n + 2) .text-container .title::before {
+  content: '';
+  height: 0.8rem;
+  width: 0.8rem;
+  color: red;
+  position: absolute;
+  top: 0.55rem;
+  left: -1.2rem;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png);
+  background-size: contain;
+}
+
 body .dashboard .inbox .task-overview .list-view .list-item .text-container .title {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
+  position: relative;
 }
 
 body .dashboard .inbox .task-overview .list-view .list-item .text-container .subtitle {
