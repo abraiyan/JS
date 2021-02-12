@@ -166,7 +166,7 @@ body .dashboard .inbox .task-overview .list-header button {
 }
 
 body .dashboard .inbox .task-overview .list-header span {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #0e5df7;
   font-weight: 500;
 }
@@ -249,7 +249,7 @@ body .dashboard .inbox .new-project__button .leading-icon {
 
 body .dashboard .inbox .new-project__button .title {
   margin-right: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -328,13 +328,14 @@ body .dashboard .header .input-field {
 
 body .dashboard .header .input-field span {
   margin-right: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #536585;
 }
 
 body .dashboard .header .input-field input {
   border: none;
   color: #536585;
+  font-size: 1.3rem;
 }
 
 body .dashboard .header .input-field input:focus {
@@ -342,7 +343,6 @@ body .dashboard .header .input-field input:focus {
 }
 
 body .dashboard .header .right-section {
-  width: 28rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,12 +364,13 @@ body .dashboard .header .right-section .button-left {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 12rem;
+  width: 13rem;
+  margin-right: 2rem;
 }
 
 body .dashboard .header .right-section .button-left .leading-icon {
-  width: 30px;
-  height: 30px;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   background-color: #0e5df7;
   display: -ms-grid;
@@ -379,12 +380,13 @@ body .dashboard .header .right-section .button-left .leading-icon {
 
 body .dashboard .header .right-section .button-left .leading-icon span {
   color: white;
+  margin-left: 2px;
 }
 
 body .dashboard .header .right-section .button-left .text-container .title {
   font-weight: 600;
-  color: #536585;
-  font-size: 1.1rem;
+  color: #1c203a;
+  font-size: 1.3rem;
 }
 
 body .dashboard .header .right-section .button-left .text-container .subtitle {
@@ -400,14 +402,14 @@ body .dashboard .header .right-section .button-left .bottom-arrow {
 
 body .dashboard .header .right-section .divider {
   display: inline-block;
-  width: 1px;
-  height: 1.4rem;
-  opacity: 0.3;
+  width: 1.6px;
+  height: 2rem;
+  opacity: 0.5;
   background-color: #536585;
 }
 
 body .dashboard .header .right-section .button-right {
-  width: 12rem;
+  margin-left: 2rem;
 }
 
 body .dashboard .header .right-section .button-right .image-container {
@@ -417,7 +419,7 @@ body .dashboard .header .right-section .button-right .image-container {
 }
 
 body .dashboard .header .right-section .button-right .text-container .subtitle {
-  color: #4f4f4f;
+  color: #536585;
 }
 
 body .dashboard .details {
@@ -452,39 +454,25 @@ body .dashboard .details .section-1 .cards-container .card {
           flex: 1;
   padding: 1.3rem;
   background-color: #ffb800;
-  border-radius: 0.8rem;
-  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-body .dashboard .details .section-1 .cards-container .card-one .top-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .dashboard .details .section-1 .cards-container .card-one .top-section .icon-container {
-  height: 5rem;
-  width: 5rem;
-  margin-right: 1.3rem;
-  background-color: white;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  border-radius: 0.8rem;
-  font-size: 2.2rem;
-  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
+body .dashboard .details .section-1 .cards-container .card-one {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 body .dashboard .details .section-1 .cards-container .card-two {
   -webkit-box-flex: 1.6;
       -ms-flex: 1.6;
           flex: 1.6;
-  background-color: white;
+  background-color: #f4f7ff;
+}
+
+body .dashboard .details .section-1 .cards-container .card-three {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 body .dashboard .details .section-1 .cards-container .card-four {
