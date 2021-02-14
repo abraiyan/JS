@@ -585,6 +585,7 @@ body .dashboard .details .section-top .cards-container .common-card-style-two .t
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 body .dashboard .details .section-top .cards-container .common-card-style-two .top span {
@@ -657,9 +658,78 @@ body .dashboard .details .section-top .cards-container .card-three .bottom {
 }
 
 body .dashboard .details .section-top .cards-container .card-four {
+  position: relative;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   background-color: #f4f7ff;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .cog-icon {
+  position: absolute;
+  font-size: 2.2rem;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .status-h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: #ff0558;
+  margin-bottom: auto;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .bottom-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 0.6rem;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .bottom-div p {
+  font-size: 1.3rem;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .bottom-div .ip span {
+  color: #0e5df7;
+  font-weight: bold;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .bottom-div div {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .bottom-div div span {
+  margin-right: 0.4rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3.6rem;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/1024px-United-states_flag_icon_round.svg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+body .dashboard .details .section-top .cards-container .card-four .last-p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #0e5df7;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

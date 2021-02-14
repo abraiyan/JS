@@ -474,6 +474,7 @@ body {
               padding: 0 1.5rem;
               display: flex;
               align-items: center;
+              margin-bottom: 1.6rem;
 
               span {
                 display: grid;
@@ -543,8 +544,70 @@ body {
           }
 
           .card-four {
+            position: relative;
             flex: 2;
             background-color: $blue-white;
+
+            .cog-icon {
+              position: absolute;
+              font-size: 2.2rem;
+              bottom: 2rem;
+              right: 2rem;
+              cursor: pointer;
+            }
+
+            .status-h1 {
+              font-size: 4rem;
+              text-align: center;
+              color: rgb(255, 5, 88);
+              margin-bottom: auto;
+            }
+
+            .bottom-div {
+              display: flex;
+              align-items: center;
+              padding: 0 2rem;
+              margin-bottom: 0.6rem;
+
+              p {
+                font-size: 1.3rem;
+              }
+
+              .ip {
+                span {
+                  color: $primary-blue;
+                  font-weight: bold;
+                }
+              }
+
+              div {
+                margin-left: 1rem;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+
+                span {
+                  margin-right: 0.4rem;
+                  display: inline-block;
+                  width: 2rem;
+                  height: 2rem;
+                  border-radius: 3.6rem;
+                  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/1024px-United-states_flag_icon_round.svg.png);
+                  background-position: center;
+                  background-size: cover;
+                }
+              }
+            }
+
+            .last-p {
+              align-self: flex-start;
+              color: $primary-blue;
+              margin-left: 2rem;
+              font-weight: 600;
+              font-size: 1.2rem;
+              text-decoration: underline;
+              cursor: pointer;
+            }
           }
         }
       }
