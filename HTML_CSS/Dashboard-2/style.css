@@ -782,6 +782,7 @@ body .dashboard .details .section-middle .section-middle-cards {
 }
 
 body .dashboard .details .section-middle .section-middle-cards .card {
+  border-radius: 0.8rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -877,10 +878,109 @@ body .dashboard .details .section-bottom .section-bottom-cards {
 }
 
 body .dashboard .details .section-bottom .section-bottom-cards .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.8rem;
+  padding: 2rem;
   height: 16rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #f4f7ff;
+  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-bottom: -2rem;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .progress-bar div {
+  height: 0.6rem;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .progress-bar .a {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  background-color: #ff2365;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .progress-bar .b {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ffac2e;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .progress-bar .c {
+  -webkit-box-flex: 0.6;
+      -ms-flex: 0.6;
+          flex: 0.6;
+  background-color: #0e5df7;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .top-section p {
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  color: #536585;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section div {
+  margin-right: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section div span {
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 2rem;
+  width: 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #0e5df7;
+  color: white;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section div p {
+  font-size: 1.3rem;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section .one span {
+  background-color: #ff2365;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card .bottom-section .two span {
+  background-color: #ffac2e;
 }
 /*# sourceMappingURL=style.css.map */
