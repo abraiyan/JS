@@ -732,4 +732,101 @@ body .dashboard .details .section-top .cards-container .card-four .last-p {
   text-decoration: underline;
   cursor: pointer;
 }
+
+body .dashboard .details .section-middle {
+  margin-top: 3rem;
+}
+
+body .dashboard .details .section-middle .headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .dashboard .details .section-middle .headline h1 {
+  font-size: 2rem;
+}
+
+body .dashboard .details .section-middle .headline span {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  background-color: #e4eaff;
+  color: #0e5df7;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+body .dashboard .details .section-middle .section-middle-cards {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 2rem;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f4f7ff;
+  height: 14rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card .top-section .company {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card .top-section .company span {
+  margin-right: 0.6rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3.6rem;
+  background-position: center;
+  background-size: cover;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card .top-section .company p {
+  font-size: 1.2rem;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card .date {
+  margin-top: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+body .dashboard .details .section-middle .section-middle-cards .card .date span {
+  color: #536585;
+}
 /*# sourceMappingURL=style.css.map */

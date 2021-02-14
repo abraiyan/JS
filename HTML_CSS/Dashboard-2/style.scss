@@ -611,6 +611,82 @@ body {
           }
         }
       }
+
+      .section-middle {
+        margin-top: 3rem;
+
+        .headline {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          span {
+            display: grid;
+            place-items: center;
+            height: 2.2rem;
+            width: 2.2rem;
+            border-radius: 50%;
+            background-color: #e4eaff;
+            color: $primary-blue;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 1rem;
+          }
+        }
+
+        .section-middle-cards {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          gap: 2rem;
+
+          .card {
+            flex: 1;
+            background-color: $blue-white;
+            height: 14rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            .top-section {
+              .company {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+
+                span {
+                  margin-right: 0.6rem;
+                  display: inline-block;
+                  width: 2rem;
+                  height: 2rem;
+                  border-radius: 3.6rem;
+                  background-position: center;
+                  background-size: cover;
+                }
+
+                p {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+
+            .date {
+              margin-top: auto;
+              font-size: 1.2rem;
+              font-weight: 600;
+
+              span {
+                color: $textColorThree;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
