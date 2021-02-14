@@ -497,6 +497,7 @@ body .dashboard .details .section-top .cards-container .common-card-style-one {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 18rem;
 }
 
 body .dashboard .details .section-top .cards-container .common-card-style-one .top {
@@ -828,5 +829,58 @@ body .dashboard .details .section-middle .section-middle-cards .card .date {
 
 body .dashboard .details .section-middle .section-middle-cards .card .date span {
   color: #536585;
+}
+
+body .dashboard .details .section-bottom {
+  margin-top: 3rem;
+}
+
+body .dashboard .details .section-bottom .headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .dashboard .details .section-bottom .headline h1 {
+  font-size: 2rem;
+}
+
+body .dashboard .details .section-bottom .headline span {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  background-color: #e4eaff;
+  color: #0e5df7;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .dashboard .details .section-bottom .section-bottom-cards .card {
+  height: 16rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f4f7ff;
 }
 /*# sourceMappingURL=style.css.map */

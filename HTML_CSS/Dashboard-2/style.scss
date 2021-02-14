@@ -404,6 +404,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-width: 18rem;
 
             .top {
               padding: 0 1.5rem;
@@ -684,6 +685,46 @@ body {
                 color: $textColorThree;
               }
             }
+          }
+        }
+      }
+
+      .section-bottom {
+        margin-top: 3rem;
+
+        .headline {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          span {
+            display: grid;
+            place-items: center;
+            height: 2.2rem;
+            width: 2.2rem;
+            border-radius: 50%;
+            background-color: #e4eaff;
+            color: $primary-blue;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 1rem;
+          }
+        }
+
+        .section-bottom-cards {
+          margin-top: 2rem;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+
+          .card {
+            height: 16rem;
+            flex: 1;
+            background-color: $blue-white;
           }
         }
       }
