@@ -307,7 +307,7 @@ body .dashboard .inbox .stat-section .stat-section-subtitle {
 body .dashboard .inbox .stat-section .image {
   width: 20rem;
   height: 20rem;
-  background-image: url(./image.svg);
+  background-image: url(./images/image.svg);
   background-position: center;
   background-size: cover;
   margin: 0 auto;
@@ -612,7 +612,7 @@ body .dashboard .details .section-top .cards-container .common-card-style-two .b
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-image: url(image2.svg);
+  background-image: url(./images/image2.svg);
   background-size: cover;
   background-position: center;
 }
