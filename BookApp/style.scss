@@ -35,6 +35,23 @@ body {
   .input-section {
     margin-bottom: 4rem;
 
+    @mixin dialog {
+      font-size: 1.2rem;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .alert {
+      @include dialog;
+      background-color: $accentColor;
+    }
+
+    .success {
+      @include dialog;
+      background-color: rgb(19, 169, 255);
+    }
+
     form {
       display: flex;
       flex-direction: column;
