@@ -10,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  padding: 0 2rem;
+}
+
 body header {
   padding: 2rem;
 }
@@ -26,5 +30,84 @@ body header h1 i {
 
 body header h1 span {
   color: #ff2c48;
+}
+
+body .input-section {
+  margin-bottom: 4rem;
+}
+
+body .input-section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .input-section div {
+  margin-bottom: 2.6rem;
+}
+
+body .input-section label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+body .input-section input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+body .input-section input:focus {
+  border-width: 2px;
+  border-color: #ff2c48;
+}
+
+body .input-section input[type='submit'] {
+  border: none;
+  padding: 1.2rem;
+  width: 20%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .input-section input[type='submit']:hover {
+  background-color: lightgray;
+}
+
+body .table-section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body .table-section table {
+  border-collapse: collapse;
+  border-radius: 0.6rem 0.6rem 0 0;
+  overflow: hidden;
+  font-size: 1.4rem;
+  min-width: 100%;
+}
+
+body .table-section table thead tr {
+  text-align: left;
+  color: white;
+  background-color: #ff2c48;
+}
+
+body .table-section table tbody tr {
+  border-bottom: 1px solid lightgray;
+}
+
+body .table-section table th,
+body .table-section table td {
+  padding: 1.2rem 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
