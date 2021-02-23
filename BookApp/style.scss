@@ -1,0 +1,30 @@
+* {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  header {
+    padding: 2rem;
+
+    h1 {
+      text-align: center;
+      font-size: 2.6rem;
+
+      i {
+        color: rgb(255, 44, 72);
+        margin-right: 0.8rem;
+      }
+
+      span {
+        color: rgb(255, 44, 72);
+      }
+    }
+  }
+}

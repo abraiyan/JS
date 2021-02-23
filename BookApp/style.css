@@ -1,0 +1,30 @@
+* {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body header {
+  padding: 2rem;
+}
+
+body header h1 {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+body header h1 i {
+  color: #ff2c48;
+  margin-right: 0.8rem;
+}
+
+body header h1 span {
+  color: #ff2c48;
+}
+/*# sourceMappingURL=style.css.map */
