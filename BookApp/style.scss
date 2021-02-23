@@ -1,3 +1,5 @@
+$accentColor: rgb(255, 44, 72);
+
 * {
   font-family: 'Open Sans';
   margin: 0;
@@ -17,14 +19,15 @@ body {
     h1 {
       text-align: center;
       font-size: 2.6rem;
+      font-weight: 600;
 
       i {
-        color: rgb(255, 44, 72);
+        color: $accentColor;
         margin-right: 0.8rem;
       }
 
       span {
-        color: rgb(255, 44, 72);
+        color: $accentColor;
       }
     }
   }
@@ -56,7 +59,7 @@ body {
 
       &:focus {
         border-width: 2px;
-        border-color: rgb(255, 44, 72);
+        border-color: $accentColor;
       }
     }
 
@@ -86,7 +89,7 @@ body {
       thead tr {
         text-align: left;
         color: white;
-        background-color: rgb(255, 44, 72);
+        background-color: $accentColor;
       }
 
       tbody tr {
