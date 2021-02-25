@@ -18,23 +18,31 @@ class UI {
     const list = document.getElementById('book-list') // table-body
     const row = document.createElement('tr') // making a new table row
 
+    const deleteButton = document.createElement('td')
+    deleteButton.className = 'delete'
+    deleteButton.innerHTML = `<i class="fa fa-times" style='cursor: pointer' aria-hidden="true"></i>`
+
     row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.isbn}</td>
-            <td><i class="fa fa-times delete" style='cursor: pointer' aria-hidden="true"></i>
-            </td>
         `
+
+    row.appendChild(deleteButton)
+
+    deleteButton.addEventListener('click', (e) => {
+      Store.removeBook(book.isbn)
+      UI.deleteBook()
+      UI.displayBooks()
+    })
 
     list.appendChild(row)
     this.clearFields()
   }
 
-  static deleteBook(targetElement) {
-    if (targetElement.classList.contains('delete')) {
-      targetElement.parentElement.parentElement.remove()
-      UI.showAlert('Deleted', 'alert')
-    }
+  static deleteBook() {
+    const list = document.getElementById('book-list') // table-body
+    list.innerHTML = ''
   }
 
   static showAlert(message, className) {
@@ -108,9 +116,4 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
     Store.addBook(book)
     UI.showAlert('Successfully Added', 'success')
   }
-})
-
-document.getElementById('book-list').addEventListener('click', (e) => {
-  UI.deleteBook(e.target)
-  Store.removeBook(e.target.parentElement.previousElementSibling.textContent)
 })
