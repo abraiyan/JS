@@ -6,27 +6,12 @@ class ToDo {
   }
 }
 
-const todoArray = [
-  {
-    id: 1,
-    title: 'Go to GYM',
-    status: false,
-  },
-  {
-    id: 2,
-    title: 'Do some Study',
-    status: true,
-  },
-  {
-    id: 3,
-    title: 'Pani Khao',
-    status: false,
-  },
-]
+const todoArray = []
 
 class UI {
   static displayToDo() {
     const todoList = document.getElementById('todo-list')
+    document.getElementById('todo-list').innerHTML = ``
 
     todoArray.map((todo) => {
       const todoContainer = document.createElement('div')
@@ -50,7 +35,7 @@ class UI {
       const deleteButton = document.createElement('span')
       deleteButton.innerHTML = `<i class="fa fa-trash"></i>`
       deleteButton.addEventListener('click', (e) => {
-        console.log('delete', todo.id)
+        this.deleteTodo(todo.id)
       })
 
       const insideDiv = document.createElement('div')
@@ -65,6 +50,33 @@ class UI {
       todoList.appendChild(todoContainer)
     })
   }
+
+  static deleteTodo(id) {
+    const index = todoArray.findIndex((todo) => {
+      return todo.id === id
+    })
+    console.log(index)
+    todoArray.splice(index, 1)
+    this.displayToDo()
+  }
+
+  static addTodo(todoTitle) {
+    const todoItem = new ToDo(uuidv4(), todoTitle, false)
+    todoArray.push(todoItem)
+    this.displayToDo()
+  }
 }
 
 document.addEventListener('DOMContentLoaded', UI.displayToDo())
+
+document.querySelector('.todo-form').addEventListener('submit', (e) => {
+  const inputField = document.getElementById('todo-title')
+  e.preventDefault()
+
+  if (inputField.value === '') {
+    console.log('Honto Hobena')
+  } else {
+    UI.addTodo(inputField.value)
+    inputField.value = ''
+  }
+})
