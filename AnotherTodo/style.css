@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#0d62ff), to(#ff294d));
+  background-image: linear-gradient(to right top, #0d62ff, #ff294d);
+}
+
+header {
+  padding: 3rem 0;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .form-container {
+  margin-bottom: 2rem;
+}
+
+main .form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .form-container form input {
+  width: 30rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  padding: 1rem 0.2rem;
+  color: white;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+main .form-container form button {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 500;
+}
+
+main .todo-container {
+  width: 38rem;
+}
+
+main .todo-container ul .container {
+  padding: 1rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+main .todo-container ul .container p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+main .todo-container ul .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .todo-container ul .container div span {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #ff294d;
+  color: white;
+}
+
+main .todo-container ul .container div span:first-child {
+  background-color: #0d62ff;
+  margin-right: 0.4rem;
+}
+
+main .todo-container ul .container div span i {
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=style.css.map */
