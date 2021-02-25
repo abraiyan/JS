@@ -15,14 +15,14 @@ class UI {
   }
 
   static addBookToList(book) {
-    const list = document.getElementById('book-list')
-    const row = document.createElement('tr')
+    const list = document.getElementById('book-list') // table-body
+    const row = document.createElement('tr') // making a new table row
 
     row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.isbn}</td>
-            <td><a href='#' class='delete'>X</a></td>
+            <td><i class="fa fa-times delete" aria-hidden="true" style='cursor: pointer'></i></td>
         `
 
     list.appendChild(row)
@@ -48,7 +48,7 @@ class UI {
 
     setTimeout(() => {
       document.querySelector(`.${className}`).remove()
-    }, 1200)
+    }, 1500)
   }
 
   static clearFields() {
