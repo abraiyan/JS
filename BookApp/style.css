@@ -37,6 +37,22 @@ body .input-section {
   margin-bottom: 4rem;
 }
 
+body .input-section .alert {
+  font-size: 1.2rem;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ff2c48;
+}
+
+body .input-section .success {
+  font-size: 1.2rem;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #13a9ff;
+}
+
 body .input-section form {
   display: -webkit-box;
   display: -ms-flexbox;

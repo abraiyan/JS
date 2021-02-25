@@ -22,7 +22,8 @@ class UI {
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.isbn}</td>
-            <td><i class="fa fa-times delete" aria-hidden="true" style='cursor: pointer'></i></td>
+            <td><i class="fa fa-times delete" style='cursor: pointer' aria-hidden="true"></i>
+            </td>
         `
 
     list.appendChild(row)
@@ -48,7 +49,7 @@ class UI {
 
     setTimeout(() => {
       document.querySelector(`.${className}`).remove()
-    }, 1500)
+    }, 1200)
   }
 
   static clearFields() {
