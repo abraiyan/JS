@@ -66,6 +66,13 @@ main {
   .todo-container {
     width: 38rem;
     ul {
+      div.checked {
+        background-color: rgb(228, 228, 228);
+        p {
+          text-decoration: line-through;
+        }
+      }
+
       .container {
         padding: 1rem;
         background-color: white;
@@ -91,6 +98,7 @@ main {
             place-items: center;
             background-color: rgb(255, 41, 77);
             color: white;
+            cursor: pointer;
 
             &:first-child {
               background-color: rgb(13, 98, 255);

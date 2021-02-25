@@ -78,6 +78,14 @@ main .todo-container {
   width: 38rem;
 }
 
+main .todo-container ul div.checked {
+  background-color: #e4e4e4;
+}
+
+main .todo-container ul div.checked p {
+  text-decoration: line-through;
+}
+
 main .todo-container ul .container {
   padding: 1rem;
   background-color: white;
@@ -117,6 +125,7 @@ main .todo-container ul .container div span {
   place-items: center;
   background-color: #ff294d;
   color: white;
+  cursor: pointer;
 }
 
 main .todo-container ul .container div span:first-child {
