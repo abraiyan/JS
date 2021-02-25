@@ -33,7 +33,6 @@ class UI {
     deleteButton.addEventListener('click', (e) => {
       Store.removeBook(book.isbn)
       UI.deleteBook()
-      UI.displayBooks()
     })
 
     list.appendChild(row)
@@ -43,6 +42,8 @@ class UI {
   static deleteBook() {
     const list = document.getElementById('book-list') // table-body
     list.innerHTML = ''
+    UI.showAlert('Book Deleted', 'alert')
+    UI.displayBooks()
   }
 
   static showAlert(message, className) {
