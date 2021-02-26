@@ -36,7 +36,7 @@ main {
   align-items: center;
 
   .form-container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     form {
       display: flex;
       align-items: flex-end;
@@ -63,8 +63,40 @@ main {
     }
   }
 
+  .middle-section {
+    width: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #left-todo {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    @mixin alertBasic() {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .alert {
+      background-color: rgb(255, 41, 77);
+      @include alertBasic();
+    }
+
+    .message {
+      background-color: rgb(13, 98, 255);
+      @include alertBasic();
+    }
+  }
+
   .todo-container {
     width: 38rem;
+    animation: todoContainerAnimation 0.5s ease-in;
+
     ul {
       div.checked {
         background-color: rgb(228, 228, 228);
@@ -112,5 +144,17 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes todoContainerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

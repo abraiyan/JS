@@ -42,7 +42,7 @@ main {
 }
 
 main .form-container {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 main .form-container form {
@@ -74,8 +74,46 @@ main .form-container form button {
   font-weight: 500;
 }
 
+main .middle-section {
+  width: 38rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .middle-section #left-todo {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+main .middle-section .alert {
+  background-color: #ff294d;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+main .middle-section .message {
+  background-color: #0d62ff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
 main .todo-container {
   width: 38rem;
+  -webkit-animation: todoContainerAnimation 0.5s ease-in;
+          animation: todoContainerAnimation 0.5s ease-in;
 }
 
 main .todo-container ul div.checked {
@@ -135,5 +173,31 @@ main .todo-container ul .container div span:first-child {
 
 main .todo-container ul .container div span i {
   font-size: 1.4rem;
+}
+
+@-webkit-keyframes todoContainerAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes todoContainerAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
