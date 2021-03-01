@@ -117,11 +117,53 @@ header {
       }
 
       input {
-        width: 120px;
+        width: 150px;
         outline: none;
         border: none;
         background-color: transparent;
       }
     }
+
+    .language-button-cta {
+      margin-left: 1.4rem;
+    }
+  }
+
+  .language-button-cta {
+    margin-left: 1.6rem;
+    height: 40px;
+    border: 1px solid rgb(182, 182, 182);
+    padding: 0 1.6rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+
+    span {
+      &:nth-child(1) {
+        margin-right: 1rem;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .go-to-console-text {
+    margin-left: 1.6rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: rgb(255, 35, 82);
+  }
+
+  .avatar {
+    margin-left: 1.6rem;
+    height: 40px;
+    width: 40px;
+    background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
   }
 }
