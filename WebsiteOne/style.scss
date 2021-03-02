@@ -132,11 +132,12 @@ header {
   .language-button-cta {
     margin-left: 1.6rem;
     height: 40px;
-    border: 1px solid rgb(182, 182, 182);
+    border: 1px solid rgb(209, 209, 209);
     padding: 0 1.6rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    border-radius: 2px;
     background-color: rgb(243, 243, 243);
 
     span {
@@ -151,14 +152,23 @@ header {
   }
 
   .go-to-console-text {
-    margin-left: 1.6rem;
+    margin-left: 1.4rem;
     font-weight: 600;
     font-size: 1.4rem;
     color: rgb(255, 35, 82);
+    display: grid;
+    place-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: rgb(255, 239, 243);
+    }
   }
 
   .avatar {
-    margin-left: 1.6rem;
+    margin-left: 1.4rem;
     height: 40px;
     width: 40px;
     background-image: url(https://uifaces.co/our-content/donated/gPZwCbdS.jpg);
